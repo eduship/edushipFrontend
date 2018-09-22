@@ -65,6 +65,9 @@ export default {
   justify-content: flex-start;
   margin-bottom: 0.2em;
 }
+.Event:hover{
+  background: #eeeeee;
+}
 .title{
   font-size: 1.2em;
 }

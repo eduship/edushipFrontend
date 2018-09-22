@@ -30,21 +30,21 @@ export default {
 };
 </script>
 <style>
-.flexcontainer{
+.flexcontainer {
   display: flex;
   flex-direction: row;
   flex-wrap: nowrap;
   justify-content: center;
   margin: 1%;
 }
-.liste{
+.liste {
   width: 30%;
   /* border: 1px solid black; */
 }
 
-.map{
+.map {
   width: 70%;
   height: 50em;
   /* border: 1px solid black; */
-  }
+}
 </style>
