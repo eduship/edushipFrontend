@@ -1,7 +1,7 @@
 <template>
-  <div style="position: relative">
+  <div  style="position: relative">
 <BaseNav type="default" effect="dark" expand>
-    <a class="navbar-brand" href="#">Eduship</a>
+    <a class="navbar-brand" href="/">Eduship</a>
 
     <div class="row" slot="content-header" slot-scope="{closeMenu}">
         <div class="col-6 collapse-brand">

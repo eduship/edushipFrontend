@@ -126,7 +126,7 @@
   }
 
   hr{
-     background-color: #adb5bd;
+     background-color: #adb5bd; 
   }
 
 </style>
