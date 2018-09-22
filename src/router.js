@@ -2,7 +2,7 @@ import Vue from "vue";
 import Router from "vue-router";
 import AppHeader from "./layout/AppHeader";
 import AppFooter from "./layout/AppFooter";
-import Start from "./views/start.vue";
+import Map from "./views/map.vue";
 
 Vue.use(Router);
 
