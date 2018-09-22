@@ -21,7 +21,7 @@
             </a>
         </li>
         <li class="nav-item">
-            <a class="nav-link nav-link-icon" href="/impressum">
+            <a class="nav-link nav-link-icon" href="#/impressum">
                 Über uns
             </a>
         </li>
