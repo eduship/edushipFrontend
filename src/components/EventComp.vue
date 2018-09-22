@@ -55,7 +55,8 @@ export default {
 </script>
 <style>
 .Event{
-  background: #eeeeee;
+  /* background: #eeeeee; */
+  border-bottom: 1px solid #ddd;
   padding: 0.3em;
   margin-right: 0.2em;
   display: flex;

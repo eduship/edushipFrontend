@@ -5,7 +5,7 @@
 
 
         <eventComp title="Das ist Bonn nicht Paris" rating="4" date="25.10. - 34.10.18" v-bind:category="['Banane','Gelb']" level="1"></eventComp>
-        <eventComp title="Viel zu schwer für euch" rating="2" date="88.88. - 31.41.59" v-bind:category="['Hardcore','Metal']" level="5"></eventComp>
+        <eventComp title="Viel zu schwer für euch" rating="2" date="88.88. - 31.41.56" v-bind:category="['Hardcore','Metal']" level="9818"></eventComp>
 
       </div>
 
