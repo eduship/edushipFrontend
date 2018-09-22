@@ -4,15 +4,16 @@
       <div class="liste">
 
 
-        <eventComp title="Das ist Bonn nicht Paris" rating="4" date="25.10. - 34.10.18" v-bind:category="['Banane','Gelb']" level="1"></eventComp>
-        <eventComp title="Viel zu schwer für euch" rating="2" date="88.88. - 31.41.56" v-bind:category="['Hardcore','Metal']" level="9818"></eventComp>
+        <eventComp title="Das ist Bonn nicht Paris" rating="4" date="25.10. - 34.10.18" v-bind:category="['Banane','Gelb']" level="1" moreInfos="Hier stehen dann evtl alle Infos die du jemals brauchen wirst."></eventComp>
+        <eventComp title="Viel zu schwer für euch" rating="2" date="88.88. - 31.41.56" v-bind:category="['Hardcore','Metal']" level="9818" moreInfos="Wie viele Programmierer braucht man, um eine Glühbirne zu wechseln? – Keinen einzigen, ist ein Hardware-Problem!"></eventComp>
+        <eventComp title="KLICK HIER (kein Scam!!!)" rating="5" date="flexibel aber eig immer" v-bind:category="['Spaß','Freude']" level="3" moreInfos="Wie viele Microsoft-Programmierer braucht man um eine Glühbirne zu wechseln? Keinen, Dunkelheit wird zum neuen Standard erklärt."></eventComp>
 
       </div>
 
 
       <div class="map">
 
-
+        <div id="mapid"></div>
         <iframe width="100%" height="100%" frameborder="0" scrolling="no" marginheight="0" marginwidth="0" src="https://www.openstreetmap.org/export/embed.html?bbox=6.638145446777345%2C49.11096149209398%2C7.197761535644532%2C49.311470368545116&amp;layer=mapnik" style="border: 1px solid black"></iframe>
         <!-- <br/><small><a href="https://www.openstreetmap.org/#map=12/49.2113/6.9180">View Larger Map</a></small> -->
 
@@ -39,6 +40,8 @@ export default {
 }
 .liste {
   width: 30%;
+  height: 50em;
+  overflow: scroll;
   /* border: 1px solid black; */
 }
 

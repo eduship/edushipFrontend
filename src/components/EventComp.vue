@@ -1,5 +1,5 @@
 <template>
-    <div class="Event">
+    <div class="Event" @click="modal0 = true">
       <span class="title">{{ title }}</span>
       <stars :value.sync="rating" disabled></stars>
       <span class="date">{{ date }}</span>
@@ -9,13 +9,43 @@
         </span>
       </span>
       <span class="level">Level: {{ level }}</span>
+
+
+      <modal :show="modal0">
+           <template slot="header">
+              <h5 class="modal-title" id="exampleModalLabel">{{ title }}</h5>
+           </template>
+           <div>
+             {{moreInfos}}
+           </div>
+           <template slot="footer">
+               <base-button type="secondary" @click="close">Close</base-button>
+           </template>
+      </modal>
+
+
+
     </div>
+
 </template>
 <script>
 import stars from "@/components/Stars";
+import modal from "@/components/Modal";
+
 
 export default {
   name: "EventComp",
+  data: function () {
+    return {
+      modal0: false
+    }
+  },
+  methods: {
+    close: function (event) {
+      console.log(this.modal0);
+      this.modal0 = false;
+      location.reload();
+    }},
   props: {
     title: {
       type: String,
@@ -39,17 +69,23 @@ export default {
     },
     category: {
       type: Array,
-      default: "Technisches Event",
+      default: ["Technisches Event"],
       description: "Kategorien des Events. ['Gelb', 'Bananen']"
     },
     level: {
       type: String,
-      default: 1,
+      default: "1",
       description: "Level des Events"
+    },
+    moreInfos: {
+      type: String,
+      default: "Keine weiteren Infos verfügbar.",
+      description: "Weitere Infos, die im Popup agezeigt werden."
     }
   },
   components: {
-    stars
+    stars,
+    modal
   }
 };
 </script>
