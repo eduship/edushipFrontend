@@ -1,6 +1,33 @@
 <template>
   <div class="footer">
   <footer>
+
+  </br>
+
+    <!-- Social Media Icons -->
+    <!-- Facebook -->
+    <a target="_blank" href="https://www.facebook.com/Edushipde-457384781339137/?ref=py_c"
+       class="btn btn-neutral btn-icon-only btn-facebook btn-round btn-lg" data-toggle="tooltip"
+       data-original-title="Like us">
+        <i class="fa fa-facebook-square"></i>
+    </a>
+
+    <!-- Twitter -->
+      <a target="_blank" href="https://twitter.com/Eduship1"
+         class="btn btn-neutral btn-icon-only btn-twitter btn-round btn-lg" data-toggle="tooltip"
+         data-original-title="Follow us">
+          <i class="fa fa-twitter"></i>
+      </a>
+
+    <!-- eMail -->
+    <a target="_blank" href="mailto:info@eduship.de"
+       class="btn btn-neutral btn-icon-only btn-dribbble btn-round btn-lg" data-toggle="tooltip"
+       data-original-title="Write us">
+        <i class="ni ni-email-83"></i>
+    </a>
+
+    <hr>
+
     <div class="row">
 
       <!-- linke Spalte -->
@@ -27,25 +54,25 @@
 
                 <!-- Social Media Icons -->
                 <!-- Facebook -->
-                <a target="_blank" href="https://www.facebook.com/Edushipde-457384781339137/?ref=py_c"
+                <!-- <a target="_blank" href="https://www.facebook.com/Edushipde-457384781339137/?ref=py_c"
                    class="btn btn-neutral btn-icon-only btn-facebook btn-round btn-lg" data-toggle="tooltip"
                    data-original-title="Like us">
                     <i class="fa fa-facebook-square"></i>
                 </a>
 
                 <!-- Twitter -->
-                  <a target="_blank" href="https://twitter.com/Eduship1"
+                  <!-- <a target="_blank" href="https://twitter.com/Eduship1"
                      class="btn btn-neutral btn-icon-only btn-twitter btn-round btn-lg" data-toggle="tooltip"
                      data-original-title="Follow us">
                       <i class="fa fa-twitter"></i>
-                  </a>
+                  </a> -->
 
                 <!-- eMail -->
-                <a target="_blank" href="mailto:info@eduship.de"
+                <!-- <a target="_blank" href="mailto:info@eduship.de"
                    class="btn btn-neutral btn-icon-only btn-dribbble btn-round btn-lg" data-toggle="tooltip"
                    data-original-title="Write us">
                     <i class="ni ni-email-83"></i>
-                </a>
+                </a> -->
           </div>
 
           <!-- rechte Spalte -->
@@ -60,6 +87,7 @@
               <div class="copyright">
                 Eduship &copy; 2018
               </div>
+            </br>
           </div>
     </div>
     </footer>
@@ -94,7 +122,11 @@
   }
 
   .copyright{
-    color: black;
+    color: #212529;
+  }
+
+  hr{
+     background-color: #adb5bd;
   }
 
 </style>
