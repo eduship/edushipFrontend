@@ -1,7 +1,7 @@
 <template>
-  <div style="position: relative">
+  <div  style="position: relative">
 <BaseNav type="default" effect="dark" expand>
-    <a class="navbar-brand" href="#">Eduship</a>
+    <a class="navbar-brand" href="/">Eduship</a>
 
     <div class="row" slot="content-header" slot-scope="{closeMenu}">
         <div class="col-6 collapse-brand">
@@ -16,18 +16,18 @@
 
     <ul class="navbar-nav ml-lg-auto">
         <li class="nav-item">
-            <a class="nav-link nav-link-icon" href="#">
+            <a class="nav-link nav-link-icon" href="/">
                 Events
             </a>
         </li>
         <li class="nav-item">
-            <a class="nav-link nav-link-icon" href="#/impressum">
+            <a class="nav-link nav-link-icon" href="#/about">
                 Über uns
             </a>
         </li>
         <li class="nav-item">
-            <a class="nav-link nav-link-icon" href="#">
-                Support
+            <a class="nav-link nav-link-icon" href="#/support">
+                Kontakt
             </a>
         </li>
     </ul>
