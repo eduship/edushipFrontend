@@ -57,7 +57,9 @@
             <a class="link" href="#">Impressum</a>
               </br>
               </br>
-            Eduship &copy; 2018
+              <div class="copyright">
+                Eduship &copy; 2018
+              </div>
           </div>
     </div>
     </footer>
@@ -79,7 +81,7 @@
 
   footer{
     text-align: center;
-    background-color: black;
+    background-color: #565656;
   }
 
   .link{
@@ -88,7 +90,11 @@
   }
 
   .link:hover{
-    color: grey;
+    color: black;
+  }
+
+  .copyright{
+    color: black;
   }
 
 </style>
