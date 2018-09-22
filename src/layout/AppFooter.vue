@@ -33,13 +33,13 @@
       <!-- linke Spalte -->
         <div class="col-sm">
             </br>
-          <a class="link" href="#">Events druchsuchen</a>
+          <a class="link" href="/">Events druchsuchen</a>
             </br>
             </br>
-          <a class="link" href="#">Über uns</a>
+          <a class="link" href="#/about">Über uns</a>
             </br>
             </br>
-          <a class="link" href="#">Kontakt</a>
+          <a class="link" href="#/support">Kontakt</a>
             </br>
             </br>
       </div>
@@ -48,7 +48,7 @@
           <!-- mittlere Spalte -->
           <div class="col-sm">
             </br>
-          <a class="link" href="#">Veranstalter werden</a>
+          <a class="link" href="#/organiser">Veranstalter werden</a>
             </br>
             </br>
 
@@ -78,10 +78,10 @@
           <!-- rechte Spalte -->
           <div class="col-sm">
               </br>
-            <a class="link" href="#">Datenschutz</a>
+            <a class="link" href="#/privacy">Datenschutz</a>
               </br>
               </br>
-            <a class="link" href="#">Impressum</a>
+            <a class="link" href="#/legal">Impressum</a>
               </br>
               </br>
               <div class="copyright">
