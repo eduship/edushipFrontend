@@ -60,7 +60,7 @@
                     <i class="fa fa-facebook-square"></i>
                 </a>
 
-                <!-- Twitter -->
+                <!- Twitter -->
                   <!-- <a target="_blank" href="https://twitter.com/Eduship1"
                      class="btn btn-neutral btn-icon-only btn-twitter btn-round btn-lg" data-toggle="tooltip"
                      data-original-title="Follow us">
@@ -126,7 +126,7 @@
   }
 
   hr{
-     background-color: #adb5bd; 
+     background-color: #adb5bd;
   }
 
 </style>
