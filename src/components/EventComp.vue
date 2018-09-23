@@ -1,4 +1,5 @@
 <template>
+  <div>
     <div class="Event" @click="modal0 = true">
       <span class="title">{{ title }}</span>
       <stars :value.sync="rating" disabled></stars>
@@ -9,7 +10,7 @@
         </span>
       </span>
       <span class="level">Level: {{ level }}</span>
-
+</div>
 
       <modal :show="modal0">
            <template slot="header">
