@@ -1,6 +1,6 @@
 <template>
-    <footer class="footer has-cards">
-        <div class="container container-lg">
+    <footer>
+        <!-- <div class="container container-lg">
             <div class="row">
                 <div class="col-md-6 mb-5 mb-md-0">
                     <div class="card card-lift--hover shadow border-0">
@@ -17,30 +17,30 @@
                     </div>
                 </div>
             </div>
-        </div>
+        </div> -->
         <div class="container">
             <div class="row row-grid align-items-center my-md">
                 <div class="col-lg-6">
-                    <h3 class="text-primary font-weight-light mb-2">Thank you for supporting us!</h3>
-                    <h4 class="mb-0 font-weight-light">Let's get in touch on any of these platforms.</h4>
+                    <h3 class="text-primary font-weight-light mb-2">Danke, dass du uns hilfst Bildungsangebote präsenter zu machen!</h3>
+                    <h4 class="mb-0 font-weight-light">Bleib mit uns in Kontakt über eine von diesen Plattformen</h4>
                 </div>
                 <div class="col-lg-6 text-lg-center btn-wrapper">
-                    <a target="_blank" href="https://twitter.com/creativetim"
+                    <a target="_blank" href="https://twitter.com/Eduship1"
                        class="btn btn-neutral btn-icon-only btn-twitter btn-round btn-lg" data-toggle="tooltip"
                        data-original-title="Follow us">
                         <i class="fa fa-twitter"></i>
                     </a>
-                    <a target="_blank" href="https://www.facebook.com/creativetim"
+                    <a target="_blank" href="https://www.facebook.com/Edushipde-457384781339137/?ref=py_c"
                        class="btn btn-neutral btn-icon-only btn-facebook btn-round btn-lg" data-toggle="tooltip"
                        data-original-title="Like us">
                         <i class="fa fa-facebook-square"></i>
                     </a>
-                    <a target="_blank" href="https://dribbble.com/creativetim"
-                       class="btn btn-neutral btn-icon-only btn-dribbble btn-lg btn-round" data-toggle="tooltip"
-                       data-original-title="Follow us">
-                        <i class="fa fa-dribbble"></i>
+                    <a target="_blank" href="mailto:info@eduship.de"
+                       class="btn btn-neutral btn-icon-only btn-dribbble btn-round btn-lg" data-toggle="tooltip"
+                       data-original-title="Write us">
+                        <i class="ni ni-email-83"></i>
                     </a>
-                    <a target="_blank" href="https://github.com/creativetimofficial"
+                    <a target="_blank" href="https://github.com/eduship"
                        class="btn btn-neutral btn-icon-only btn-github btn-round btn-lg" data-toggle="tooltip"
                        data-original-title="Star on Github">
                         <i class="fa fa-github"></i>
@@ -52,24 +52,23 @@
                 <div class="col-md-6">
                     <div class="copyright">
                         &copy; 2018
-                        <a href="https://www.creative-tim.com" target="_blank">Creative Tim</a>.
+                        <a href="https://www.angestoepselt.de/" target="_blank">angestöpselt e.V</a>.
                     </div>
                 </div>
                 <div class="col-md-6">
                     <ul class="nav nav-footer justify-content-end">
                         <li class="nav-item">
-                            <a href="https://www.creative-tim.com" class="nav-link" target="_blank">Creative Tim</a>
+                            <a href="#" class="nav-link" target="_blank">Events finden</a>
                         </li>
                         <li class="nav-item">
-                            <a href="https://www.creative-tim.com/presentation" class="nav-link" target="_blank">About
-                                Us</a>
+                            <a href="#" class="nav-link" target="_blank">Kontakt</a>
                         </li>
                         <li class="nav-item">
-                            <a href="http://blog.creative-tim.com" class="nav-link" target="_blank">Blog</a>
+                            <a href="#/about" class="nav-link" target="_blank">Über uns</a>
                         </li>
                         <li class="nav-item">
-                            <a href="https://github.com/creativetimofficial/argon-design-system/blob/master/LICENSE.md"
-                               class="nav-link" target="_blank">MIT License</a>
+                            <a href="https://www.angestoepselt.de/impressum/"
+                               class="nav-link" target="_blank">Impressum & Datenschutz</a>
                         </li>
                     </ul>
                 </div>
