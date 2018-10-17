@@ -74,6 +74,8 @@
                 </div>
             </div>
         </div>
+      </br>
+      </br>
     </footer>
 </template>
 <script>
