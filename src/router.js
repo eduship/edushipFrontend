@@ -2,81 +2,62 @@ import Vue from "vue";
 import Router from "vue-router";
 import AppHeader from "./layout/AppHeader";
 import AppFooter from "./layout/AppFooter";
-import Start from "./views/map.vue";
-import LegalInformation from "./views/legal.vue";
-import About from "./views/about.vue";
-import Support from "./views/support.vue";
-import Organiser from "./views/organiser.vue";
-import Privacy from "./views/privacy.vue";
-import SingleEvent from "./views/singleEvent.vue";
+import Components from "./views/Components.vue";
+import Landing from "./views/Landing.vue";
+import Login from "./views/Login.vue";
+import Register from "./views/Register.vue";
+import Profile from "./views/Profile.vue";
 
 Vue.use(Router);
 
 export default new Router({
   linkExactActiveClass: "active",
-  routes: [{
-    path: "/",
-    name: "start",
-    components: {
-      header: AppHeader,
-      default: Start,
-      footer: AppFooter
+  routes: [
+    {
+      path: "/",
+      name: "components",
+      components: {
+        header: AppHeader,
+        default: Components,
+        footer: AppFooter
+      }
+    },
+    {
+      path: "/landing",
+      name: "landing",
+      components: {
+        header: AppHeader,
+        default: Landing,
+        footer: AppFooter
+      }
+    },
+    {
+      path: "/login",
+      name: "login",
+      components: {
+        header: AppHeader,
+        default: Login,
+        footer: AppFooter
+      }
+    },
+    {
+      path: "/register",
+      name: "register",
+      components: {
+        header: AppHeader,
+        default: Register,
+        footer: AppFooter
+      }
+    },
+    {
+      path: "/profile",
+      name: "profile",
+      components: {
+        header: AppHeader,
+        default: Profile,
+        footer: AppFooter
+      }
     }
-  },
-  {
-    path: "/legal",
-    name: "legalInformation",
-    components: {
-      header: AppHeader,
-      default: LegalInformation,
-      footer: AppFooter
-    }
-  },
-  {
-    path: "/about",
-    name: "about",
-    components: {
-      header: AppHeader,
-      default: About,
-      footer: AppFooter
-    }
-  },
-  {
-    path: "/support",
-    name: "support",
-    components: {
-      header: AppHeader,
-      default: Support,
-      footer: AppFooter
-    }
-},
-  {
-  path: "/privacy",
-  name: "privacy",
-  components: {
-    header: AppHeader,
-    default: Privacy,
-    footer: AppFooter
-  }
-},
-{
-  path: "/organiser",
-  name: "organiser",
-  components: {
-    header: AppHeader,
-    default: Organiser,
-    footer: AppFooter
-  }
-},
-  {
-    path: "/event",
-    name: "event",
-    components: {
-      header: AppHeader,
-      default: SingleEvent,
-      footer: AppFooter
-    }
-  }
   ],
   scrollBehavior: to => {
     if (to.hash) {
