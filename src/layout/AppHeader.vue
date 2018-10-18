@@ -26,7 +26,13 @@
                     <i class="ni ni-collection d-lg-none"></i>
                     <span class="nav-link-inner--text">Über uns</span>
                 </a>
+                <a slot="title" href="#" class="nav-link" data-toggle="dropdown" role="button">
+                      <i class="ni ni-ui-04 d-lg-none"></i>
+                      <span class="nav-link-inner--text">Kontakt</span>
+                </a>
             </ul>
+
+
             <ul class="navbar-nav align-items-lg-center ml-lg-auto">
                 <li class="nav-item">
                     <a class="nav-link nav-link-icon" href="https://www.facebook.com/Edushipde-457384781339137/" target="_blank"
