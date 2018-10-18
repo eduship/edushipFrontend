@@ -22,7 +22,7 @@
             <div class="row row-grid align-items-center my-md">
                 <div class="col-lg-6">
                     <h3 class="text-primary font-weight-light mb-2">Danke, dass du uns hilfst Bildungsangebote präsenter zu machen!</h3>
-                    <h4 class="mb-0 font-weight-light">Bleib mit uns in Kontakt über eine von diesen Plattformen</h4>
+                    <h4 class="mb-0 font-weight-light">Bleib mit uns in Kontakt über eine dieser Plattformen</h4>
                 </div>
                 <div class="col-lg-6 text-lg-center btn-wrapper">
                     <a target="_blank" href="https://twitter.com/Eduship1"
