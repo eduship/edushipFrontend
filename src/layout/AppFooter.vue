@@ -64,7 +64,7 @@
                             <a href="#" class="nav-link" target="_blank">Kontakt</a>
                         </li>
                         <li class="nav-item">
-                            <a href="#/about" class="nav-link" target="_blank">Über uns</a>
+                            <a href="#/About" class="nav-link" target="_blank">Über uns</a>
                         </li>
                         <li class="nav-item">
                             <a href="https://www.angestoepselt.de/impressum/"
