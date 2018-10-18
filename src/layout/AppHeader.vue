@@ -1,7 +1,7 @@
 <template>
     <header class="header-global">
         <base-nav class="navbar-main" transparent type="" effect="light" expand>
-            <a slot="brand" class="navbar-brand mr-lg-5" href="/">
+            <a slot="brand" class="navbar-brand mr-lg-5" href="#/landing">
                 <img src="img/brand/white.png">
             </a>
 
@@ -17,16 +17,16 @@
             </div>
 
             <ul class="navbar-nav navbar-nav-hover align-items-lg-center">
-                <a slot="title" href="#" class="nav-link" data-toggle="dropdown" role="button">
+                <a slot="title" href="#/landing" class="nav-link" data-toggle="dropdown" role="button">
                       <i class="ni ni-ui-04 d-lg-none"></i>
                       <span class="nav-link-inner--text">Event finden</span>
                 </a>
 
-                <a slot="title" href="#" class="nav-link" data-toggle="dropdown" role="button">
+                <a slot="title" href="#/about" class="nav-link" data-toggle="dropdown" role="button">
                     <i class="ni ni-collection d-lg-none"></i>
                     <span class="nav-link-inner--text">Über uns</span>
                 </a>
-                <a slot="title" href="#" class="nav-link" data-toggle="dropdown" role="button">
+                <a slot="title" href="#/contact" class="nav-link" data-toggle="dropdown" role="button">
                       <i class="ni ni-ui-04 d-lg-none"></i>
                       <span class="nav-link-inner--text">Kontakt</span>
                 </a>
