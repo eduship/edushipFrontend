@@ -19,9 +19,7 @@
                     <div class="col px-0">
                         <div class="row">
                             <div class="col-lg-6">
-                                <h1 class="display-3  text-white">A beautiful Design System
-                                    <span>completed with examples</span>
-                                </h1>
+                                <h1 class="display-3  text-white">Finde coole Events rund um digitale themen.</h1>
                                 <p class="lead  text-white">Finde coole Events rund um digitale Themen</p>
                             </div>
                         </div>

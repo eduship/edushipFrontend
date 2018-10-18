@@ -30,15 +30,24 @@
       <collaboratorComp namedC="Elisabeth" v-bind:randomFact = "['Lieblingsspitzname: Elsbet', 'Lieblingsfarbe: #033A0B', 'Lieblingsbuch: Harry Potter', 'hört gerne: Känguru Chroniken']"> </collaboratorComp>
     </div>
     <div class="col-sm">
-      <collaboratorComp v-bind:buttonId = "2" namedC="Moritz" v-bind:randomFact="['Lieblingsfarbe: #F16027', 'Lieblingsbiermarke: Oettinger', 'Lieblingsspruch: Die Standart eines Flamingos ist einbeinig', 'war Mensch der Woche in der Bild der Frau']"> </collaboratorComp>
+      <collaboratorComp v-bind:buttonId = "2" namedC="Moritz" v-bind:randomFact="['Lieblingsfarbe: #F16027', 'Lieblingsbiermarke: Oettinger', 'Lieblingsspruch: Die Standardstandart eines Flamingos ist einbeinig', 'war Mensch der Woche in der Bild der Frau']"> </collaboratorComp>
     </div>
-  </br>
+  </div>
+  <div class="row">
     <div class="col-sm">
       <collaboratorComp namedC="Jana" v-bind:buttonId = "3" v-bind:randomFact = "['Lieblingsfarbe: #912453', 'Lieblingsfilm: Forrest Gump', 'Lieblingsbuch: Harry Potter', 'Lieblingsserie: Game of Thrones']"> </collaboratorComp>
     </div>
-    <!-- <div class="col-sm">
-      <collaboratorComp v-bind:buttonId = "4" namedC="Moritz" v-bind:randomFact="['Lieblingsfarbe: #F16027', 'Lieblingsbiermarke: Oettinger', 'Lieblingsspruch: Die Standart eines Flamingos ist einbeinig', 'war Mensch der Woche in der Bild der Frau']"> </collaboratorComp>
-    </div> -->
+    <div class="col-sm">
+      <collaboratorComp v-bind:buttonId = "4" namedC="Fynn" v-bind:randomFact="['Fakt fehlt']"> </collaboratorComp>
+    </div>
+  </div>
+  <div class="row">
+    <div class="col-sm">
+      <collaboratorComp v-bind:buttonId = "5" namedC="Jonas" v-bind:randomFact="['Fakt fehlt']"> </collaboratorComp>
+    </div>
+    <div class="col-sm">
+      <collaboratorComp v-bind:buttonId = "6" namedC="Ruben" v-bind:randomFact="['Fakt fehlt']"> </collaboratorComp>
+    </div>
   </div>
 </div>
 </template>

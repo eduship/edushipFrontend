@@ -52,7 +52,7 @@
                 <div class="col-md-6">
                     <div class="copyright">
                         &copy; 2018
-                        <a href="https://www.angestoepselt.de/" target="_blank">angestöpselt e.V</a>.
+                        <a href="https://www.angestoepselt.de/" target="_blank">eduship</a>.
                     </div>
                 </div>
                 <div class="col-md-6">
@@ -61,10 +61,10 @@
                             <a href="#" class="nav-link" target="_blank">Events finden</a>
                         </li>
                         <li class="nav-item">
-                            <a href="#" class="nav-link" target="_blank">Kontakt</a>
+                            <a href="#/about" class="nav-link" target="_blank">Über uns</a>
                         </li>
                         <li class="nav-item">
-                            <a href="#/about" class="nav-link" target="_blank">Über uns</a>
+                            <a href="#" class="nav-link" target="_blank">Kontakt</a>
                         </li>
                         <li class="nav-item">
                             <a href="https://www.angestoepselt.de/impressum/"
@@ -74,6 +74,8 @@
                 </div>
             </div>
         </div>
+      </br>
+      </br>
     </footer>
 </template>
 <script>
