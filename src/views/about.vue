@@ -30,7 +30,7 @@
       <collaboratorComp namedC="Elisabeth" v-bind:randomFact = "['Lieblingsspitzname: Elsbet', 'Lieblingsfarbe: #033A0B', 'Lieblingsbuch: Harry Potter', 'hört gerne: Känguru Chroniken']"> </collaboratorComp>
     </div>
     <div class="col-sm">
-      <collaboratorComp v-bind:buttonId = "2" namedC="Moritz" v-bind:randomFact="['Lieblingsfarbe: #F16027', 'Lieblingsbiermarke: Oettinger', 'Lieblingsspruch: Die Standart eines Flamingos ist einbeinig', 'war Mensch der Woche in der Bild der Frau']"> </collaboratorComp>
+      <collaboratorComp v-bind:buttonId = "2" namedC="Moritz" v-bind:randomFact="['Lieblingsfarbe: #F16027', 'Lieblingsbiermarke: Oettinger', 'Lieblingsspruch: Die Standardstandart eines Flamingos ist einbeinig', 'war Mensch der Woche in der Bild der Frau']"> </collaboratorComp>
     </div>
   </div>
   <div class="row">
