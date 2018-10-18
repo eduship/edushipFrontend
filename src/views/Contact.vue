@@ -3,7 +3,7 @@
       <div class="position-relative">
           <!-- shape Hero -->
           <section class="section-shaped my-0">
-              <div class="shape shape-style-1 shape-default shape-skew">
+              <div class="shape shape-primary shape-skew">
                   <span></span>
                   <span></span>
                   <span></span>
@@ -46,7 +46,7 @@
                                           cols="80" placeholder="Schreib' uns eine Nachricht..."></textarea>
                         </base-input>
                         <base-button type="primary" round block size="lg" color="#553B91">
-                            Nachrich abschicken
+                            Nachricht abschicken
                         </base-button>
                     </card>
                 </div>
