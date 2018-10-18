@@ -1,7 +1,5 @@
 <template>
   <div >
-
-
       <div class="position-relative">
           <!-- shape Hero -->
           <section class="section-shaped my-0">
@@ -20,10 +18,8 @@
                   <div class="col px-0">
                       <div class="row">
                           <div class="col-lg-6">
-                              <h1 class="display-3  text-white">A beautiful Design System
-                                  <span>completed with examples</span>
-                              </h1>
-                              <p class="lead  text-white">Finde coole Events rund um digitale Themen</p>
+                              <h1 class="display-3  text-white">Kontakt</h1>
+                              <p class="lead  text-white">Du hast Fragen, Anregungen oder Kritik? Dann meld dich bei uns!</p>
                           </div>
                       </div>
                   </div>
@@ -36,30 +32,27 @@
             <div class="row justify-content-center mt--300">
                 <div class="col-lg-8">
                     <card gradient="secondary" shadow body-classes="p-lg-5">
-                        <h4 class="mb-1">Want to work with us?</h4>
-                        <p class="mt-0">Your project is very important to us.</p>
                         <base-input class="mt-5"
                                     alternative
-                                    placeholder="Your name"
+                                    placeholder="Name"
                                     addon-left-icon="ni ni-user-run">
                         </base-input>
                         <base-input alternative
-                                    placeholder="Email address"
+                                    placeholder="Email Adresse"
                                     addon-left-icon="ni ni-email-83">
                         </base-input>
                         <base-input class="mb-4">
                                 <textarea class="form-control form-control-alternative" name="name" rows="4"
-                                          cols="80" placeholder="Type a message..."></textarea>
+                                          cols="80" placeholder="Schreib' uns eine Nachricht..."></textarea>
                         </base-input>
-                        <base-button type="default" round block size="lg">
-                            Send Message
+                        <base-button type="primary" round block size="lg" color="#553B91">
+                            Nachrich abschicken
                         </base-button>
                     </card>
                 </div>
             </div>
         </div>
     </section>
-
 </div>
 </template>
 <script>
