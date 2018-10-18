@@ -45,7 +45,7 @@
                                 <textarea class="form-control form-control-alternative" name="name" rows="4"
                                           cols="80" placeholder="Schreib' uns eine Nachricht..."></textarea>
                         </base-input>
-                        <base-button type="default" round block size="lg">
+                        <base-button type="primary" round block size="lg" color="#553B91">
                             Nachrich abschicken
                         </base-button>
                     </card>
