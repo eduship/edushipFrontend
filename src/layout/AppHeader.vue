@@ -7,7 +7,7 @@
 
             <div class="row" slot="content-header" slot-scope="{closeMenu}">
                 <div class="col-6 collapse-brand">
-                    <a href="https://demos.creative-tim.com/vue-argon-design-system/documentation/">
+                    <a href="#/landing">
                         <img src="img/brand/blue.png">
                     </a>
                 </div>
@@ -17,7 +17,7 @@
             </div>
 
             <ul class="navbar-nav navbar-nav-hover align-items-lg-center">
-                <a slot="title" href="#/landing" class="nav-link" data-toggle="dropdown" role="button">
+                <a slot="title" href="#/Events" class="nav-link" data-toggle="dropdown" role="button">
                       <i class="ni ni-ui-04 d-lg-none"></i>
                       <span class="nav-link-inner--text">Event finden</span>
                 </a>
