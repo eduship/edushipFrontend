@@ -46,7 +46,7 @@
                                           cols="80" placeholder="Schreib' uns eine Nachricht..."></textarea>
                         </base-input>
                         <base-button type="primary" round block size="lg" color="#553B91">
-                            Nachrich abschicken
+                            Nachricht abschicken
                         </base-button>
                     </card>
                 </div>
