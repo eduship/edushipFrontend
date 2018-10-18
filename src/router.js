@@ -8,6 +8,7 @@ import Login from "./views/Login.vue";
 import Register from "./views/Register.vue";
 import Profile from "./views/Profile.vue";
 import About from "./views/About.vue";
+import Kontakt from "./views/Kontakt.vue";
 
 Vue.use(Router);
 
@@ -62,6 +63,15 @@ export default new Router({
     {
       path: "/profile",
       name: "profile",
+      components: {
+        header: AppHeader,
+        default: Profile,
+        footer: AppFooter
+      }
+    },
+    {
+      path: "/contact",
+      name: "contact",
       components: {
         header: AppHeader,
         default: Profile,
