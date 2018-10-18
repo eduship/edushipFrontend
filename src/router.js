@@ -7,8 +7,10 @@ import Landing from "./views/Landing.vue";
 import Login from "./views/Login.vue";
 import Register from "./views/Register.vue";
 import Profile from "./views/Profile.vue";
-import About from "./views/About.vue";
-import Kontakt from "./views/Kontakt.vue";
+
+import About from "./views/about.vue";
+import Contact from "./views/Contact.vue";
+
 
 Vue.use(Router);
 
@@ -74,7 +76,7 @@ export default new Router({
       name: "contact",
       components: {
         header: AppHeader,
-        default: Profile,
+        default: Contact,
         footer: AppFooter
       }
     }
