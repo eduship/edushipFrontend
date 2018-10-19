@@ -38,7 +38,7 @@
   </div>
   <div class="row">
     <div class="col-sm">
-      <collaboratorComp v-bind:buttonId = "4" namedC="Fynn" v-bind:randomFact="['Fakt fehlt']"> </collaboratorComp>
+      <collaboratorComp v-bind:imagePath="['img/theme/Fynn.jpg']" v-bind:buttonId = "4" namedC="Fynn" v-bind:randomFact="['war im Silicon Valley :)', 'Lieblingsfarbe: #6B6B47', 'mag Anzüge', 'Lieblingsfilm: Forrest Gump', 'Lieblingssänger: Ed Sheeran']"> </collaboratorComp>
     </div>
     <div class="col-sm">
       <collaboratorComp v-bind:buttonId = "5" namedC="Jonas" v-bind:randomFact="['Fakt fehlt']"> </collaboratorComp>
