@@ -2,7 +2,8 @@
   <div class="position-relative">
            <!-- shape Hero -->
            <section class="section-profile-cover section-shaped my-0">
-            <div class="shape shape-primary shape-skew alpha-4">
+            <div class="shape shape-primary shape-skew">
+
                    <span></span>
                    <span></span>
                    <span></span>
@@ -32,16 +33,14 @@
     <div class="col-sm">
       <collaboratorComp v-bind:buttonId = "2" namedC="Moritz" v-bind:randomFact="['Lieblingsfarbe: #F16027', 'Lieblingsbiermarke: Oettinger', 'Lieblingsspruch: Die Standardstandart eines Flamingos ist einbeinig', 'war Mensch der Woche in der Bild der Frau']"> </collaboratorComp>
     </div>
-  </div>
-  <div class="row">
     <div class="col-sm">
       <collaboratorComp namedC="Jana" v-bind:buttonId = "3" v-bind:randomFact = "['Lieblingsfarbe: #912453', 'Lieblingsfilm: Forrest Gump', 'Lieblingsbuch: Harry Potter', 'Lieblingsserie: Game of Thrones']"> </collaboratorComp>
     </div>
+  </div>
+  <div class="row">
     <div class="col-sm">
       <collaboratorComp v-bind:buttonId = "4" namedC="Fynn" v-bind:randomFact="['Fakt fehlt']"> </collaboratorComp>
     </div>
-  </div>
-  <div class="row">
     <div class="col-sm">
       <collaboratorComp v-bind:buttonId = "5" namedC="Jonas" v-bind:randomFact="['Fakt fehlt']"> </collaboratorComp>
     </div>

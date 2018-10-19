@@ -30,7 +30,7 @@
         imagePath: {
           type: String,
           description: "Der Pfad zu dem Portrait",
-          default: "img/randomFrau.jpg",}
+          default: "img/theme/randomFrau.jpg",}
       },
       components: {
       },

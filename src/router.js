@@ -3,13 +3,14 @@ import Router from "vue-router";
 import AppHeader from "./layout/AppHeader";
 import AppFooter from "./layout/AppFooter";
 import Components from "./views/Components.vue";
-import Landing from "./views/Landing.vue";
 import Login from "./views/Login.vue";
 import Register from "./views/Register.vue";
 import Profile from "./views/Profile.vue";
 
-import About from "./views/about.vue";
+import Landing from "./views/Landing.vue";
+import About from "./views/About.vue";
 import Contact from "./views/Contact.vue";
+import Events from "./views/Events.vue";
 
 
 Vue.use(Router);
@@ -23,6 +24,15 @@ export default new Router({
       components: {
         header: AppHeader,
         default: Components,
+        footer: AppFooter
+      }
+    },
+    {
+      path: "/events",
+      name: "events",
+      components: {
+        header: AppHeader,
+        default: Events,
         footer: AppFooter
       }
     },
