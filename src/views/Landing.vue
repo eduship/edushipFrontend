@@ -5,15 +5,15 @@
             <!-- shape Hero -->
             <section class="section-shaped my-0">
                 <div class="shape shape-primary shape-skew">
-                  <span></span>
-                  <span></span>
-                  <span></span>
-                  <span></span>
-                  <span></span>
-                  <span></span>
-                  <span></span>
-                  <span></span>
-                  <span></span>
+                    <span></span>
+                    <span></span>
+                    <span></span>
+                    <span></span>
+                    <span></span>
+                    <span></span>
+                    <span></span>
+                    <span></span>
+                    <span></span>
                 </div>
                 <div class="container shape-container">
                     <!-- <div class="col px-0"> -->
