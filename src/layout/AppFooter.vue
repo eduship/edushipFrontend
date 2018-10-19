@@ -76,6 +76,7 @@
           </section>
       </br>
       </br>
+    </div>
     </footer>
 </template>
 <script>
