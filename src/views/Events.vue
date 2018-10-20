@@ -58,7 +58,7 @@
                 <!-- die anderen Components, also die Liste -->
                 <!-- <ul id="eventList">
                   <li v-for="event in events"> -->
-                    <EventComp v-bind:eventName = ></EventComp>
+                    <EventComp></EventComp>
                   <!-- </li> -->
                 <!-- </ul> -->
               </div>
