@@ -54,14 +54,9 @@
                   </gmap-custom-marker-->
                 </gmap-map>
               </div>
-              </div>
-            <div class="row row-grid align-items-center">
-              <!-- rechte Spalte -->
-              <div class="col-md-6 order-md-2">
-                <!-- Hier hin muss die Karte -->
-              </div>
+           
               <!-- linke Spalte -->
-              <div class="col-md-3 order-md-1">
+              <div class="col-md-12 order-md-1">
                 <Scroll>
                 <!-- die anderen Components, also die Liste -->
                 <!-- <ul id="eventList">
