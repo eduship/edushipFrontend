@@ -30,8 +30,8 @@
 
       <section class="section section-lg">
         <div class="container">
-            <div class="row row-grid align-items-center">
-              <!-- linke Spalte -->
+            <!-- <div class="row row-grid align-items-center">
+
               <div class="col-md-6 order-md-1">
                   <div class="pr-md-5">
                     <icon name="ni ni-archive-2" class="mb-5" size="lg" type="primary" shadow
@@ -39,7 +39,7 @@
                     <a class="lead text" style ="margin-left: 1em">Sortieren </a>
                   </div>
               </div>
-              <!-- rechte Spalte -->
+
               <div class="col-md-6 order-md-1">
                 <div class="pr-md-5">
                   <icon name="ni ni-settings-gear-65" class="mb-5" size="lg" type="primary" shadow
@@ -47,7 +47,7 @@
                   <a class="lead text" style ="margin-left: 1em">Filtern</a>
                 </div>
               </div>
-            </div>
+            </div> -->
             <div class="row row-grid align-items-center">
               <!-- rechte Spalte -->
               <div class="col-md-6 order-md-2">
@@ -55,12 +55,13 @@
               </div>
               <!-- linke Spalte -->
               <div class="col-md-3 order-md-1">
+                <Scroll>
                 <!-- die anderen Components, also die Liste -->
                 <!-- <ul id="eventList">
                   <li v-for="event in events"> -->
-                    <EventComp></EventComp>
                   <!-- </li> -->
                 <!-- </ul> -->
+              </Scroll>
               </div>
             </div>
         </div>
@@ -71,10 +72,12 @@
 
 <script>
 import EventComp from "@/components/EventComp";
+import Scroll from "./components/ScrollComp.vue"
 export default {
   name: "home",
   components: {
-    EventComp
+    EventComp,
+    Scroll
   },
   data () {
     return{
