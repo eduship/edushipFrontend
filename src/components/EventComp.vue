@@ -26,7 +26,7 @@
   </div>
 </template>
 
-<script>
+<script defer>
     export default {
       name: "EventComp",
       props: {
@@ -63,9 +63,10 @@
       components: {
       },
       methods:{
+
       },
     };
-</script>
+</script defer>
 
 <style>
 </style>

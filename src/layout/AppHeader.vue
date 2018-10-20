@@ -1,13 +1,13 @@
 <template>
     <header class="header-global">
         <base-nav class="navbar-main" transparent type="" effect="light" expand>
-            <a slot="brand" class="navbar-brand mr-lg-5" href="#/landing">
+            <a slot="brand" class="navbar-brand mr-lg-5" href="#/">
                 <img src="img/brand/white.png">
             </a>
 
             <div class="row" slot="content-header" slot-scope="{closeMenu}">
                 <div class="col-6 collapse-brand">
-                    <a href="#/landing">
+                    <a href="#/">
                         <img src="img/brand/schrift.png">
                     </a>
                 </div>
