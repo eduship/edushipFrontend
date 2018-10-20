@@ -76,7 +76,7 @@
                           <icon name="ni ni-send" class="mb-5" size="lg" type="info" shadow
                                 rounded></icon>
                           <h3 class="font-weight-light mb-2" style="color: #11cdef">Schreib uns!</h3>
-                          <h4 class="mb-5 font-weight-light">Du hast Anregungen, Lob, Kritik? Du kennst noch mehr Veranstaltungen? Sie sind selber Veranstalter?</h4>
+                          <h4 class="mb-5 font-weight-light">Du hast Anregungen, Lob, Kritik? Du kennst noch mehr Veranstaltungen?</h4>
                           <a href="#/Contact">
                               <base-button type="info">Kontaktiere uns!</base-button>
                           </a>
@@ -85,7 +85,20 @@
                     <div class="col-md-6 order-md-2">
                       <img src="img/theme/paperplane.png" class="img-fluid floating">
                     </div>
-                </div>
+                  </div>
+                  <div class="row row-grid align-items-center">
+                    <!-- rechte Spalte -->
+                    <div class="col-md-6 order-md-2">
+                      <icon name="ni ni-fat-add" class="mb-5" size="lg" type="primary" shadow
+                            rounded></icon>
+                      <h3 class="font-weight-light mb-2" style="color: primary">Werden Sie Veranstalter!</h3>
+                      <h4 class="mb-5 font-weight-light">Sind Sie Veranstalter einer Weiterbildungsseminar für digitalinteressierte Jugendliche? Dann melden Sie sich bei uns an! Über eduship erreichen wir viele Jugendliche, die normalerweise unterrepräsentiert sind, wie Mädchen, Geflüchtete oder Jugenliche aus einkommensschwächeren Haushalten.</h4>
+                    </div>
+                    <!-- linke Spalte -->
+                    <div class="col-md-6 order-md-1" style="margin-top: 0px">
+                      <img src="img/theme/Sign_up.png" class="img-fluid floating">
+                    </div>
+                  </div>
                 </div>
               </section>
           </div>
