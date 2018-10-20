@@ -40,38 +40,23 @@
                   :zoom="5.5"
                   style="width:200%;  height: 500px;"
                 >
-                  <gmap-custom-marker :marker="marker">
+                <GmapMarker
+                  :key="index"
+                  v-for="(position, index) in markers"
+                  :position="position"
+                  :clickable="true"
+                  :draggable="true"
+                  @click="center=position"
+                />
+                  <!--gmap-custom-marker :marker="marker">
                     <img src="https://www.yummp.net/_resources/images/green-icon-code.png" />
                     <my-component></my-component>
-                  </gmap-custom-marker>
+                  </gmap-custom-marker-->
                 </gmap-map>
               </div>
               </div>
-              <!-- linke Spalte -->
-              <!--div class="col-md-3 order-md-1">
-                <EventComp></EventComp>
-              </div-->
-
-          <!--  <div class="row row-grid align-items-center">
-  LINKS
-              <div class="col-md-6 order-md-1">
-                  <div class="pr-md-5">
-                    <icon name="ni ni-archive-2" class="mb-5" size="lg" type="primary" shadow
-                          rounded></icon>
-                    <a class="lead text" style ="margin-left: 1em">Sortieren </a>
-                  </div>
-              </div>
-          RECHTS
-              <div class="col-md-6 order-md-1">
-                <div class="pr-md-5">
-                  <icon name="ni ni-settings-gear-65" class="mb-5" size="lg" type="primary" shadow
-                        rounded></icon>
-                  <a class="lead text" style ="margin-left: 1em">Filtern</a>
-                </div>
-              </div>
-            </div> -->
             <div class="row row-grid align-items-center">
-              
+
               <!-- rechte Spalte -->
               <div class="col-md-6 order-md-2">
                 <!-- Hier hin muss die Karte -->
@@ -89,9 +74,10 @@
                 </Scroll>
               </div>
             </div>
+          </div>
         </div>
-      </section>
-    </div>
+    </section>
+  </div>
 </template>
 
 
@@ -102,25 +88,31 @@ import Scroll from "./components/ScrollComp";
 
 export default {
   name: "home",
+  components: {
+    EventComp,
+    'gmap-custom-marker': GmapCustomMarker,
+    Scroll
+  },
   data() {
     return {
       center: { lat: 51.165, lng: 10.451 },
-      markers: [{
-        position: {
-          lat: 49.619936,
-          lng: 9.885131
-        }
+      markers: [
+        {
+            lat: 49.619936,
+            lng: 9.885131
+        },
+        {
+          lat: 30.619936,
+          lng: 10.885131
       }],
       places: [],
       currentPlace: null,
       marker: {
         lat: 50.60229509638775,
         lng: 3.0247059387528408
-      }
+      },
+      'events': null
     };
-  },
-  mounted() {
-    this.geolocate();
   },
 
   methods: {
@@ -148,33 +140,6 @@ export default {
         };
       });
     }
-  },
-  components: {
-    EventComp,
-    'gmap-custom-marker': GmapCustomMarker
-  },
-    Scroll,
-    EventComp
-  },
-  data () {
-    return{
-      'events': null
     }
-  },
-  methods: {
-    getevents: function(){
-      let request = new Request('http://localhost:5000/event/all')
-      fetch(request).then(function (response){
-        console.log(response);
-        return response.json()
-      }).then((response) => {
-        this.events = response});
-      }
-    },
-    watch: {
-      currentPage: function() {
-        this.getevents()
-      }
-    }
-};
+  };
 </script>
