@@ -30,8 +30,8 @@
 
       <section class="section section-lg">
         <div class="container">
-            <div class="row row-grid align-items-center">
-              <!-- linke Spalte -->
+          <!--  <div class="row row-grid align-items-center">
+  LINKS
               <div class="col-md-6 order-md-1">
                   <div class="pr-md-5">
                     <icon name="ni ni-archive-2" class="mb-5" size="lg" type="primary" shadow
@@ -39,7 +39,7 @@
                     <a class="lead text" style ="margin-left: 1em">Sortieren </a>
                   </div>
               </div>
-              <!-- rechte Spalte -->
+          RECHTS
               <div class="col-md-6 order-md-1">
                 <div class="pr-md-5">
                   <icon name="ni ni-settings-gear-65" class="mb-5" size="lg" type="primary" shadow
@@ -47,8 +47,9 @@
                   <a class="lead text" style ="margin-left: 1em">Filtern</a>
                 </div>
               </div>
-            </div>
+            </div> -->
             <div class="row row-grid align-items-center">
+              
               <!-- rechte Spalte -->
               <div class="col-md-6 order-md-2">
                 <!-- Hier hin muss die Karte -->
@@ -58,7 +59,8 @@
               <!-- linke Spalte -->
               <div class="col-md-3 order-md-1">
                 <!-- die anderen Components, also die Liste -->
-                <EventComp></EventComp>
+                <Scroll>
+                </Scroll>
                 <!-- <img src="img/theme/Hello-waving-gif.gif" class="img-fluid floating" shadow> -->
                     <!-- nur ein Testwert, um rechts und links und sowas zu machen -->
               </div>
@@ -71,10 +73,12 @@
 
 <script>
 import EventComp from "@/components/EventComp";
+import Scroll from "./components/ScrollComp";
 
 export default {
   name: "home",
   components: {
+    Scroll,
     EventComp
   }
 };
