@@ -58,10 +58,9 @@
                 <!-- die anderen Components, also die Liste -->
                 <!-- <ul id="eventList">
                   <li v-for="event in events"> -->
-                    <EventComp></EventComp>
+                    <EventComp v-bind:eventName = ></EventComp>
                   <!-- </li> -->
                 <!-- </ul> -->
-                {{events}}
               </div>
             </div>
         </div>
@@ -79,23 +78,28 @@ export default {
   },
   data () {
     return{
-      'events': null
+      events: null
     }
   },
-  methods: {
-    getevents: function(){
-      let request = new Request('http://localhost:5000/event/all')
-      fetch(request).then(function (response){
-        console.log(response);
-        return response.json()
-      }).then((response) => {
-        this.events = response});
-      }
-    },
-    watch: {
-      currentPage: function() {
-        this.getevents()
-      }
-    }
+  // methods: {
+  //   getevents: function(){
+  //     let request = new Request("http://localhost:5000/event/all")
+  //     console.log(fetch(request));
+  //     fetch(request).then(function (response){
+  //       return response.json()
+  //     }).then((response) => {
+  //       this.events = response});
+  //     }
+  //   },
+  //   created: {
+  //     currentPage: function() {
+  //       this.getevents()
+  //     }
+  //   }
+  mounted() {
+      axios
+        .get ('https://api.coindesk.com/v1/bpi/currentprice.json')
+        .then (response => (this.events = response))
+  }
 };
 </script>
