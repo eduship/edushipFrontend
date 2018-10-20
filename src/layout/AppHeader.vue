@@ -17,12 +17,9 @@
             </div>
 
             <ul class="navbar-nav navbar-nav-hover align-items-lg-center">
-<<<<<<< HEAD
+
 
                 <a slot="title" href="#/events" class="nav-link" data-toggle="dropdown" role="button">
-=======
-                <a slot="title" href="#/Events" class="nav-link" data-toggle="dropdown" role="button">
->>>>>>> 706afc64be37ce85af51fd0819fcfc9f5a3e207a
 
                       <span class="nav-link-inner--text">Event finden</span>
                 </a>
