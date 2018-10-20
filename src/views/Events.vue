@@ -30,8 +30,30 @@
 
       <section class="section section-lg">
         <div class="container">
-            <!-- <div class="row row-grid align-items-center">
 
+            <div class="row row-grid align-items-center">
+              <!-- rechte Spalte -->
+              <div class="col-md-6 order-md-2">
+                <div>
+                <gmap-map
+                  :center="center"
+                  :zoom="5.5"
+                  style="width:200%;  height: 500px;"
+                >
+                  <GmapCustomMarker :marker="marker">
+                    <img src="https://www.yummp.net/_resources/images/green-icon-code.png" />
+                    <my-component></my-component>
+                  </GmapCustomMarker>
+                </gmap-map>
+              </div>
+              </div>
+              <!-- linke Spalte -->
+              <!--div class="col-md-3 order-md-1">
+                <EventComp></EventComp>
+              </div-->
+
+          <!--  <div class="row row-grid align-items-center">
+  LINKS
               <div class="col-md-6 order-md-1">
                   <div class="pr-md-5">
                     <icon name="ni ni-archive-2" class="mb-5" size="lg" type="primary" shadow
@@ -65,6 +87,7 @@
               </div>
             </div>
         </div>
+      </div>
       </section>
     </div>
 </template>
@@ -72,12 +95,63 @@
 
 <script>
 import EventComp from "@/components/EventComp";
-import Scroll from "./components/ScrollComp.vue"
+import GmapCustomMarker from "vue2-gmap-custom-marker";
+import Scroll from "./components/ScrollComp.vue";
+
 export default {
   name: "home",
+  data() {
+    return {
+      center: { lat: 51.165, lng: 10.451 },
+      markers: [{
+        position: {
+          lat: 49.619936,
+          lng: 9.885131
+        }
+      }],
+      places: [],
+      currentPlace: null,
+      marker: {
+        lat: 50.60229509638775,
+        lng: 3.0247059387528408
+      }
+    };
+  },
+  mounted() {
+    this.geolocate();
+  },
+
+  methods: {
+    // receives a place object via the autocomplete component
+    setPlace(place) {
+      this.currentPlace = place;
+    },
+    addMarker() {
+      if (this.currentPlace) {
+        const marker = {
+          lat: this.currentPlace.geometry.location.lat(),
+          lng: this.currentPlace.geometry.location.lng()
+        };
+        this.markers.push({ position: marker });
+        this.places.push(this.currentPlace);
+        this.center = marker;
+        this.currentPlace = null;
+      }
+    },
+    geolocate: function() {
+      navigator.geolocation.getCurrentPosition(position => {
+        this.center = {
+          lat: position.coords.latitude,
+          lng: position.coords.longitude
+        };
+      });
+    }
+  },
   components: {
     EventComp,
-    Scroll
+    GmapCustomMarker,
+    Scroll,
+    EventComp
   },
   data () {
     return{
