@@ -56,27 +56,24 @@
               </div>
               </div>
             <div class="row row-grid align-items-center">
-
               <!-- rechte Spalte -->
               <div class="col-md-6 order-md-2">
                 <!-- Hier hin muss die Karte -->
               </div>
               <!-- linke Spalte -->
               <div class="col-md-3 order-md-1">
-                <!-- die anderen Components, also die Liste -->
-
                 <Scroll>
+                <!-- die anderen Components, also die Liste -->
                 <!-- <ul id="eventList">
                   <li v-for="event in events"> -->
-                    <EventComp></EventComp>
                   <!-- </li> -->
                 <!-- </ul> -->
-                </Scroll>
+              </Scroll>
               </div>
             </div>
           </div>
         </div>
-    </section>
+      </section>
   </div>
 </template>
 
@@ -84,7 +81,8 @@
 <script>
 import EventComp from "@/components/EventComp";
 import GmapCustomMarker from "vue2-gmap-custom-marker";
-import Scroll from "./components/ScrollComp";
+import Scroll from "./components/ScrollComp.vue";
+import axios from 'axios';
 
 export default {
   name: "home",
@@ -111,7 +109,8 @@ export default {
         lat: 50.60229509638775,
         lng: 3.0247059387528408
       },
-      'events': null
+      events: [],
+      errors: []
     };
   },
 
@@ -139,7 +138,18 @@ export default {
           lng: position.coords.longitude
         };
       });
-    }
-    }
+     }
+    },
+    created() {
+    axios.get(`http://localhost:5000/event/all`)
+    .then(response => {
+      // JSON responses are automatically parsed.
+      this.events = response.data;
+      //console.log(this.events);
+    })
+    .catch(e => {
+      this.errors.push(e);
+    })
+  }
   };
 </script>
