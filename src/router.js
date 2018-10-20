@@ -13,6 +13,7 @@ import Contact from "./views/Contact.vue";
 import Events from "./views/Events.vue";
 
 
+
 Vue.use(Router);
 
 export default new Router({
