@@ -67,6 +67,9 @@
                             <a href="#/Contact" class="nav-link" target="_blank">Kontakt</a>
                         </li>
                         <li class="nav-item">
+                            <a href="#" class="nav-link" target="_blank">Veranstalter werden</a>
+                        </li>
+                        <li class="nav-item">
                             <a href="https://www.angestoepselt.de/impressum/"
                                class="nav-link" target="_blank">Impressum & Datenschutz</a>
                         </li>

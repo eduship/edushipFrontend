@@ -26,7 +26,7 @@
               </div>
           </section>
       </div>
-
+    <form>
     <section class="section section-lg pt-lg-0 section-contact-us">
         <div class="container">
             <div class="row justify-content-center mt--300">
@@ -35,17 +35,21 @@
                         <base-input class="mt-5"
                                     alternative
                                     placeholder="Name"
-                                    addon-left-icon="ni ni-user-run">
+                                    addon-left-icon="ni ni-user-run"
+                                    v-model="nameInput"
+                                    >
                         </base-input>
                         <base-input alternative
                                     placeholder="Email Adresse"
-                                    addon-left-icon="ni ni-email-83">
+                                    addon-left-icon="ni ni-email-83"
+                                    v-model="emailInput">
                         </base-input>
                         <base-input class="mb-4">
                                 <textarea class="form-control form-control-alternative" name="name" rows="4"
-                                          cols="80" placeholder="Schreib' uns eine Nachricht..."></textarea>
+                                          cols="80" placeholder="Schreib' uns eine Nachricht..."
+                                          v-model="nachrichtInput"></textarea>
                         </base-input>
-                        <base-button type="primary" round block size="lg" color="#553B91">
+                        <base-button type="primary" round block size="lg" color="#553B91" @click.prevent="getFormValues()">
                             Nachricht abschicken
                         </base-button>
                     </card>
@@ -53,11 +57,34 @@
             </div>
         </div>
     </section>
+  </form>
 </div>
 </template>
+
 <script>
 export default {
   name: "contact",
-  components: {}
+  components: {},
+  data() {
+    return{
+      submitData:{
+        name: "",
+        email: "",
+        nachricht: "",
+      },
+      nameInput: "",
+      emailInput: "",
+      nachrichtInput: "",
+    };
+  },
+  methods: {
+    getFormValues(){
+      this.submitData.name = this.nameInput;
+      this.submitData.email = this.emailInput;
+      this.submitData.nachricht = this.nachrichtInput;
+      console.log(this.submitData);
+    }
+  }
 };
+
 </script>
