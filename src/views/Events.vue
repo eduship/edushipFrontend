@@ -52,15 +52,16 @@
               <!-- rechte Spalte -->
               <div class="col-md-6 order-md-2">
                 <!-- Hier hin muss die Karte -->
-                <!-- <img src="img/theme/Hello-waving-gif.gif" class="img-fluid floating" shadow> -->
-                    <!-- nur ein Testwert, um rechts und links und sowas zu machen -->
               </div>
               <!-- linke Spalte -->
               <div class="col-md-3 order-md-1">
                 <!-- die anderen Components, also die Liste -->
-                <EventComp></EventComp>
-                <!-- <img src="img/theme/Hello-waving-gif.gif" class="img-fluid floating" shadow> -->
-                    <!-- nur ein Testwert, um rechts und links und sowas zu machen -->
+                <!-- <ul id="eventList">
+                  <li v-for="event in events"> -->
+                    <EventComp></EventComp>
+                  <!-- </li> -->
+                <!-- </ul> -->
+                {{events}}
               </div>
             </div>
         </div>
@@ -71,11 +72,30 @@
 
 <script>
 import EventComp from "@/components/EventComp";
-
 export default {
   name: "home",
   components: {
     EventComp
-  }
+  },
+  data () {
+    return{
+      'events': null
+    }
+  },
+  methods: {
+    getevents: function(){
+      let request = new Request('http://localhost:5000/event/all')
+      fetch(request).then(function (response){
+        console.log(response);
+        return response.json()
+      }).then((response) => {
+        this.events = response});
+      }
+    },
+    watch: {
+      currentPage: function() {
+        this.getevents()
+      }
+    }
 };
 </script>
