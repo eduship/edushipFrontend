@@ -12,6 +12,8 @@ import About from "./views/About.vue";
 import Contact from "./views/Contact.vue";
 import Events from "./views/Events.vue";
 
+import Testscroll from "../scrollcomp.vue";
+
 
 Vue.use(Router);
 
@@ -24,6 +26,15 @@ export default new Router({
       components: {
         header: AppHeader,
         default: Components,
+        footer: AppFooter
+      }
+    },
+    {
+      path: "/scroll",
+      name: "scroll",
+      components: {
+        header: AppHeader,
+        default: Testscroll,
         footer: AppFooter
       }
     },
