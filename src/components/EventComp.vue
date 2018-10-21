@@ -115,15 +115,11 @@ import modal from "@/components/Modal.vue";
         }
       },
       methods:{
-<<<<<<< HEAD
         close: function (event) {
           console.log(this.modal0);
           this.modal0 = false;
           location.reload();
         }
-=======
-
->>>>>>> 00c7df693722019765479aaaba15532ced99914a
       },
     };
 </script defer>
