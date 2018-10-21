@@ -32,12 +32,8 @@
         <div class="container">
 
             <div class="row row-grid align-items-center">
-            <!-- linke Spalte -->
-              <div class="col-md-5">
-                <Scroll></Scroll>
-              </div>
               <!-- rechte Spalte -->
-              <div class="col-md-7">
+              <div class="col-md-7 order-md-2">
                 <gmap-map
                   :center="center"
                   :zoom="5.5"
@@ -57,6 +53,10 @@
                   </gmap-custom-marker-->
                 </gmap-map>
               </div>
+              <!-- linke Spalte -->
+                <div class="col-md-5 order-md-1">
+                  <Scroll></Scroll>
+                </div>
             </div>
           </div>
       </section>
