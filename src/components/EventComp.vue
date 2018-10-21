@@ -1,6 +1,5 @@
 <template>
-  <div class="template">
-    <div class="Event" @click="modal0 = true">
+  <div>
     <!--h4 style="color: primary; margin-bottom: 0.3em">{{eventName}}</h4>
       <span style="margin-top: 0px">Level: {{eventLevel}}</span>
         </br>
@@ -13,40 +12,101 @@
           <card class="border-15" hover shadow body-classes="py-5">
               <icon name="ni ni-spaceship" type="primary" rounded class="mb-4">
               </icon>
-              <h6 class="text-primary text-uppercase">{{eventName}}</h6>
+              <h4 class="text-primary text-uppercase">{{eventName}}</h4>
+              <p class="description mt-3">{{eventDate}}</p>
               <p class="description mt-3">{{eventLocation}}</p>
-              <div v-for="item in eventTag">
+              <div v-for="item in eventTags">
                   <badge type="primary" rounded></badge>
               </div>
-              <h6 class="text-uppercase">{{eventOrganization}}</h6>
-              <base-button tag="a" href="#" type="primary" class="mt-4">
-                  Erfahre mehr
-              </base-button>
+              <h6 class="text-primary text-uppercase">{{eventOrganisation}}</h6>
+              <div class="Event" @click="modal0 = true">
+                <base-button tag="a" type="primary" class="mt-4">
+                  <div class="text-white">
+                    Erfahre mehr
+                  </div>
+                </base-button>
+              </div>
           </card>
       </div>
-    </div>
   <modal :show="modal0">
        <template slot="header">
-          <h4 class="modal-title" id="exampleModalLabel">{{ eventName }}</h4>
+         <div class="col">
+           <h4 class="modal-title" id="exampleModalLabel" style="margin-bottom: 0.5em">{{ eventName }}</h4>
+           {{eventDate}}
+         </div>
        </template>
-       <div>
-         {{eventDate}}
-         {{eventOrganization}}
-         {{eventDate}}
-         {{eventLink}}
-         {{eventCosts}}
-         {{eventLocation}}
-            </br>
-         {{eventLevel}}
-            </br>
-          {{eventLocation}}
-            </br>
-          Kategorien: {{evenTag}}
-            </br>
-          Altersklasse: {{eventAge}}
-            </br>
-
-       </div>
+       <div style="text-align: left; margin-bottom: 0.5em">
+           <!-- <div class="row">
+             <div class="col">
+               Organisation:
+             </div>
+             <div class="col">
+               {{eventOrganization}}
+             </div>
+           </div> -->
+           <div class="row" style="background-color: Gray 200">
+             <div class="col">
+               Level:
+             </div>
+             <div class="col">
+               {{eventLevel}}
+            </div>
+          </div>
+          <div class="row">
+            <div class="col">
+              Ort:
+            </div>
+            <div class="col">
+              {{eventLocation}}
+            </div>
+          </div>
+          <div class="row">
+            <div class="col">
+              Kategorien:
+            </div>
+            <div class="col">
+              {{eventTags}}
+            </div>
+          </div>
+          <div class="row">
+            <div class="col">
+              Altersklasse:
+            </div>
+            <div class="col">
+              {{eventAge}}
+            </div>
+          </div>
+          <div class="row">
+            <div class="col">
+              Ort:
+            </div>
+            <div class="col">
+              {{eventLocation}}
+            </div>
+          </div>
+          <div class="row">
+            <div class="col">
+              Teilnahegebühr:
+            </div>
+            <div class="col">
+              {{eventCosts}}
+            </div>
+          </div>
+          <div class="row">
+            <div class="col">
+              Dafür bekommst du:
+            </div>
+            <div class="col">
+              {{eventIncluded}}
+            </div>
+          </div>
+        </div>
+          </br>
+          <h5 style="primary"> {{eventDescription}} </h5>
+          </br>
+          <a v-bind:href="this.eventLink">
+            <base-button type="primary">Jetzt anmelden</base-button>
+          </a>
        <template slot="footer">
            <base-button type="secondary" @click="close">Close</base-button>
        </template>
@@ -64,10 +124,12 @@ import modal from "@/components/Modal.vue";
           default: "Code + Design",
           // default: "Leider wurde kein Name von diesem Event gefunden",
           description: "Name des Events"},
-        eventOrganization: {
+
+        eventOrganisation: {
             type: String,
             default: "Leider ist uns die Organsiation nicht bekannt",
-            description: "Die Organsiation die den Event durchführt"},
+            description: "Die Organsiation die das Event durchführt"},
+
         eventLocation: {
             type: String,
             default: "Veranstaltungsort",
@@ -80,7 +142,7 @@ import modal from "@/components/Modal.vue";
           type: String,
           default: "entry",
           description: "Schwierigkeitgrads des Events (entry - advanced - pro)"},
-        eventTag: {
+        eventTags: {
           type: String,
           default: "Tag hier",
           description: "unnötig"},
@@ -123,9 +185,3 @@ import modal from "@/components/Modal.vue";
       },
     };
 </script defer>
-
-<style>
-.border-0:hover{
-  background: #eeeeee;
-}
-</style>
