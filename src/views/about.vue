@@ -39,13 +39,13 @@
   </div>
   <div class="row">
     <div class="col-sm">
-      <collaboratorComp v-bind:imagePath="['img/theme/Fynn.jpg']" v-bind:buttonId = "4" namedC="Fynn" v-bind:randomFact="['war im Silicon Valley :)', 'Lieblingsfarbe: #6B6B47', 'mag Anzüge', 'Lieblingsfilm: Forrest Gump', 'Lieblingssänger: Ed Sheeran']"> </collaboratorComp>
+      <collaboratorComp v-bind:imagePath="['img/theme/Fynn.jpg']" v-bind:buttonId = "4" namedC="Fynn" v-bind:randomFact="['war im Silicon Valley :)', 'Lieblingsfarbe: #6B6B47', 'mag Anzüge', 'Lieblingsfilm: Forrest Gump', 'Lieblingssänger: Ed Sheeran','Erzählt gerne, dass er die ersten 30 Stellen von PI kann']"> </collaboratorComp>
     </div>
     <div class="col-sm">
       <collaboratorComp v-bind:buttonId = "5" namedC="Jonas" v-bind:imagePath="['img/theme/Jonas.jpg']" v-bind:randomFact="['hat sein Bild zu spät eingereicht', 'Lieblingsfarbe: #b4ffa5', 'Lieblingssong: Spaghetti Love']"> </collaboratorComp>
     </div>
     <div class="col-sm">
-      <collaboratorComp v-bind:buttonId = "6" namedC="Ruben" v-bind:imagePath="['img/theme/Ruben.jpg']" v-bind:randomFact="['mag alte bilder von sich nicht', 'Lieblingsfarbe: #d0d8af', 'Lieblingsfont: Comic Sans']"> </collaboratorComp>
+      <collaboratorComp v-bind:buttonId = "6" namedC="Ruben" v-bind:imagePath="['img/theme/Ruben.jpg']" v-bind:randomFact="['mag alte bilder von sich nicht', 'Lieblingsfarbe: #d0d8af', 'Lieblingsfont: Comic Sans', 'Hasst php debugging']"> </collaboratorComp>
     </div>
   </div>
 </div>
