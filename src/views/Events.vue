@@ -45,11 +45,11 @@
                 >
                 <GmapMarker
                   :key="index"
-                  v-for="(position, index) in markers"
-                  :position="position"
+                  v-for="(location, index) in markers"
+                  :position="location"
                   :clickable="true"
                   :draggable="true"
-                  @click="center=position"
+                  @click="center=location"
                 />
                   <!--gmap-custom-marker :marker="marker">
                     <img src="https://www.yummp.net/_resources/images/green-icon-code.png" />
@@ -82,56 +82,63 @@ export default {
       center: { lat: 51.165, lng: 10.451 },
       markers: [
         {
-            lat: 49.619936,
-            lng: 9.885131
+          lat: 49.619936,
+          lng: 9.885131
         },
         {
-          lat: 30.619936,
-          lng: 10.885131
-      }],
-      places: [],
-      currentPlace: null,
-      marker: {
-        lat: 50.60229509638775,
-        lng: 3.0247059387528408
-      },
+          lat: 49.411,
+          lng: 8.706
+        },
+        {
+          lat: 48.396,
+          lng: 9.990
+        },
+        {
+          lat: 51.226,
+          lng: 6.782
+        },
+        {
+          lat: 51.327,
+          lng: 12.317
+        },
+        {
+          lat: 49.680,
+          lng: 10.526
+        },
+        {
+          lat: 52.438,
+          lng: 13.262
+        },
+        {
+          lat: 53.600,
+          lng: 10.069
+        },
+        {
+          lat: 48.104,
+          lng: 11.600
+        },
+        {
+          lat: 53.549,
+          lng: 10.009
+        },
+        
+      ],
       events: [],
       errors: []
     };
   },
 
-  methods: {
-    // receives a place object via the autocomplete component
-    setPlace(place) {
-      this.currentPlace = place;
-    },
-    addMarker() {
-      if (this.currentPlace) {
-        const marker = {
-          lat: this.currentPlace.geometry.location.lat(),
-          lng: this.currentPlace.geometry.location.lng()
-        };
-        this.markers.push({ position: marker });
-        this.places.push(this.currentPlace);
-        this.center = marker;
-        this.currentPlace = null;
-      }
-    },
-    geolocate: function() {
-      navigator.geolocation.getCurrentPosition(position => {
-        this.center = {
-          lat: position.coords.latitude,
-          lng: position.coords.longitude
-        };
-      });
-     }
-    },
     created() {
     axios.get(`http://localhost:5000/event/all`)
     .then(response => {
       // JSON responses are automatically parsed.
       this.events = response.data;
-      //console.log(this.events);
+      //console.log(this.events.item);
+      for (var i = 0; i < this.events.length; i++) {
+        var event = this.events[i];
+        event.position = { lat: event.lat, lng: event.long};
+        console.log(event.position);
+      }
     })
     .catch(e => {
       this.errors.push(e);
