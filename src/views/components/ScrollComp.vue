@@ -7,7 +7,7 @@
                    :eventLocation="item.placeAdress"
                    :eventDate="item.date"
                    :eventLevel="item.level"
-                   :eventTag="item.tags"
+                   :eventTags="item.tags"
                    :eventDescription="item.description"
                    :eventLink="item.link"
                    :eventCosts="item.costs"
