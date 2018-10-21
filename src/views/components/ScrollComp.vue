@@ -10,8 +10,9 @@
                    :eventTag="item.tags"
                    :eventDescription="item.description"
                    :eventLink="item.link"
-                   :eventCost="item.cost"
+                   :eventCosts="item.costs"
                    :eventAge="item.age"
+                   :eventIncluded="item.included"
                 >
         </EventComp>
       </li>
