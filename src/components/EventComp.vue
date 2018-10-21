@@ -13,17 +13,12 @@
               <icon name="ni ni-spaceship" type="primary" rounded class="mb-4">
               </icon>
               <h4 class="text-primary text-uppercase">{{eventName}}</h4>
+              <p class="description mt-3">{{eventDate}}</p>
               <p class="description mt-3">{{eventLocation}}</p>
               <div v-for="item in eventTags">
                   <badge type="primary" rounded></badge>
               </div>
-<<<<<<< HEAD
               <h6 class="text-primary text-uppercase">{{eventOrganisation}}</h6>
-              <base-button tag="a" href="#" type="primary" class="mt-4">
-                  Erfahre mehr
-              </base-button>
-=======
-              <h6 class="text-uppercase">{{eventOrganization}}</h6>
               <div class="Event" @click="modal0 = true">
                 <base-button tag="a" type="primary" class="mt-4">
                   <div class="text-white">
@@ -31,7 +26,6 @@
                   </div>
                 </base-button>
               </div>
->>>>>>> 955dd470873e3dbe30c480075436167a97fadd96
           </card>
       </div>
   <modal :show="modal0">
@@ -41,26 +35,6 @@
            {{eventDate}}
          </div>
        </template>
-<<<<<<< HEAD
-       <div>
-         {{eventDate}}
-         {{eventOrganisation}}
-         {{eventDate}}
-         {{eventLink}}
-         {{eventCosts}}
-         {{eventLocation}}
-            </br>
-         {{eventLevel}}
-            </br>
-          {{eventLocation}}
-            </br>
-          Kategorien: {{evenTag}}
-            </br>
-          Altersklasse: {{eventAge}}
-            </br>
-
-       </div>
-=======
        <div style="text-align: left; margin-bottom: 0.5em">
            <!-- <div class="row">
              <div class="col">
@@ -133,7 +107,6 @@
           <a v-bind:href="this.eventLink">
             <base-button type="primary">Jetzt anmelden</base-button>
           </a>
->>>>>>> 955dd470873e3dbe30c480075436167a97fadd96
        <template slot="footer">
            <base-button type="secondary" @click="close">Close</base-button>
        </template>
