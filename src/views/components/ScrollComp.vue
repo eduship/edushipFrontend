@@ -5,6 +5,7 @@
        <li v-for="item in events">
         <EventComp :eventName="item.name"
                    :eventLocation="item.placeAdress"
+                   :eventOrganisation="item.organisation"
                    :eventDate="item.date"
                    :eventLevel="item.level"
                    :eventTag="item.tags"

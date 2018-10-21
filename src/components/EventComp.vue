@@ -13,12 +13,12 @@
           <card class="border-15" hover shadow body-classes="py-5">
               <icon name="ni ni-spaceship" type="primary" rounded class="mb-4">
               </icon>
-              <h6 class="text-primary text-uppercase">{{eventName}}</h6>
+              <h4 class="text-primary text-uppercase">{{eventName}}</h4>
               <p class="description mt-3">{{eventLocation}}</p>
               <div v-for="item in eventTag">
                   <badge type="primary" rounded></badge>
               </div>
-              <h6 class="text-uppercase">{{eventOrganization}}</h6>
+              <h6 class="text-primary text-uppercase">{{eventOrganisation}}</h6>
               <base-button tag="a" href="#" type="primary" class="mt-4">
                   Erfahre mehr
               </base-button>
@@ -31,7 +31,7 @@
        </template>
        <div>
          {{eventDate}}
-         {{eventOrganization}}
+         {{eventOrganisation}}
          {{eventDate}}
          {{eventLink}}
          {{eventCosts}}
@@ -64,10 +64,12 @@ import modal from "@/components/Modal.vue";
           default: "Code + Design",
           // default: "Leider wurde kein Name von diesem Event gefunden",
           description: "Name des Events"},
-        eventOrganization: {
+
+        eventOrganisation: {
             type: String,
             default: "Leider ist uns die Organsiation nicht bekannt",
-            description: "Die Organsiation die den Event durchführt"},
+            description: "Die Organsiation die das Event durchführt"},
+
         eventLocation: {
             type: String,
             default: "Veranstaltungsort",
