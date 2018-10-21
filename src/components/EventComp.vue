@@ -1,5 +1,6 @@
 <template>
   <div class="template">
+    <div class="Event" @click="modal0 = true">
     <!--h4 style="color: primary; margin-bottom: 0.3em">{{eventName}}</h4>
       <span style="margin-top: 0px">Level: {{eventLevel}}</span>
         </br>
@@ -22,11 +23,31 @@
               </base-button>
           </card>
       </div>
+    </div>
+  <modal :show="modal0">
+       <template slot="header">
+          <h4 class="modal-title" id="exampleModalLabel">{{ eventName }}</h4>
+       </template>
+       <div>
+         {{eventLocation}}
+            </br>
+         {{eventLevel}}
+            </br>
+          {{eventLocation}}
+            </br>
+          Kategorien: {{evenTag}}
+            </br>
 
+       </div>
+       <template slot="footer">
+           <base-button type="secondary" @click="close">Close</base-button>
+       </template>
+  </modal>
   </div>
 </template>
 
 <script>
+import modal from "@/components/Modal.vue";
     export default {
       name: "EventComp",
       props: {
@@ -54,18 +75,45 @@
         eventDate: {
           type: String,
           default: "30.10-5.11.2018",
-          description: "Der Zeitraum des Events"}
+          description: "Der Zeitraum des Events"},
+        eventDescription: {
+          type: String,
+          default: "Hier könnte Ihre Beschreibung stehen",
+          description: "Die Beschreibung des Events"},
+        eventAge: {
+          type: String,
+          default: "Idk, maybe 12-18?",
+          description: "Die Altersspanne für den Event"},
+        eventCost: {
+          type: String,
+          default: "20$/0$",
+          description: "Der Kosten für das Event, einmal normal, einmal für Familien, die sich die Teinahmegebühr nicht leisten kônnen"
+        }
         // eventOrganization: {
         //   type: String,
         //   default: "Leider ist uns die Organsiation nicht bekannt",
         //   description: "Die Organsiation die den Event durchführt"}
         },
       components: {
+        modal
+      },
+      data: function () {
+        return {
+          modal0: false
+        }
       },
       methods:{
+        close: function (event) {
+          console.log(this.modal0);
+          this.modal0 = false;
+          location.reload();
+        }
       },
     };
 </script>
 
 <style>
+.border-0:hover{
+  background: #eeeeee;
+}
 </style>

@@ -96,6 +96,8 @@ export default {
     closeModal() {
       this.$emit("update:show", false);
       this.$emit("close");
+
+      location.reload();
     }
   },
   watch: {
