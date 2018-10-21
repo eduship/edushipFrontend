@@ -1,6 +1,5 @@
 <template>
-  <div class="template">
-    <div class="Event" @click="modal0 = true">
+  <div>
     <!--h4 style="color: primary; margin-bottom: 0.3em">{{eventName}}</h4>
       <span style="margin-top: 0px">Level: {{eventLevel}}</span>
         </br>
@@ -15,20 +14,34 @@
               </icon>
               <h4 class="text-primary text-uppercase">{{eventName}}</h4>
               <p class="description mt-3">{{eventLocation}}</p>
-              <div v-for="item in eventTag">
+              <div v-for="item in eventTags">
                   <badge type="primary" rounded></badge>
               </div>
+<<<<<<< HEAD
               <h6 class="text-primary text-uppercase">{{eventOrganisation}}</h6>
               <base-button tag="a" href="#" type="primary" class="mt-4">
                   Erfahre mehr
               </base-button>
+=======
+              <h6 class="text-uppercase">{{eventOrganization}}</h6>
+              <div class="Event" @click="modal0 = true">
+                <base-button tag="a" type="primary" class="mt-4">
+                  <div class="text-white">
+                    Erfahre mehr
+                  </div>
+                </base-button>
+              </div>
+>>>>>>> 955dd470873e3dbe30c480075436167a97fadd96
           </card>
       </div>
-    </div>
   <modal :show="modal0">
        <template slot="header">
-          <h4 class="modal-title" id="exampleModalLabel">{{ eventName }}</h4>
+         <div class="col">
+           <h4 class="modal-title" id="exampleModalLabel" style="margin-bottom: 0.5em">{{ eventName }}</h4>
+           {{eventDate}}
+         </div>
        </template>
+<<<<<<< HEAD
        <div>
          {{eventDate}}
          {{eventOrganisation}}
@@ -47,6 +60,80 @@
             </br>
 
        </div>
+=======
+       <div style="text-align: left; margin-bottom: 0.5em">
+           <!-- <div class="row">
+             <div class="col">
+               Organisation:
+             </div>
+             <div class="col">
+               {{eventOrganization}}
+             </div>
+           </div> -->
+           <div class="row" style="background-color: Gray 200">
+             <div class="col">
+               Level:
+             </div>
+             <div class="col">
+               {{eventLevel}}
+            </div>
+          </div>
+          <div class="row">
+            <div class="col">
+              Ort:
+            </div>
+            <div class="col">
+              {{eventLocation}}
+            </div>
+          </div>
+          <div class="row">
+            <div class="col">
+              Kategorien:
+            </div>
+            <div class="col">
+              {{eventTags}}
+            </div>
+          </div>
+          <div class="row">
+            <div class="col">
+              Altersklasse:
+            </div>
+            <div class="col">
+              {{eventAge}}
+            </div>
+          </div>
+          <div class="row">
+            <div class="col">
+              Ort:
+            </div>
+            <div class="col">
+              {{eventLocation}}
+            </div>
+          </div>
+          <div class="row">
+            <div class="col">
+              Teilnahegebühr:
+            </div>
+            <div class="col">
+              {{eventCosts}}
+            </div>
+          </div>
+          <div class="row">
+            <div class="col">
+              Dafür bekommst du:
+            </div>
+            <div class="col">
+              {{eventIncluded}}
+            </div>
+          </div>
+        </div>
+          </br>
+          <h5 style="primary"> {{eventDescription}} </h5>
+          </br>
+          <a v-bind:href="this.eventLink">
+            <base-button type="primary">Jetzt anmelden</base-button>
+          </a>
+>>>>>>> 955dd470873e3dbe30c480075436167a97fadd96
        <template slot="footer">
            <base-button type="secondary" @click="close">Close</base-button>
        </template>
@@ -82,7 +169,7 @@ import modal from "@/components/Modal.vue";
           type: String,
           default: "entry",
           description: "Schwierigkeitgrads des Events (entry - advanced - pro)"},
-        eventTag: {
+        eventTags: {
           type: String,
           default: "Tag hier",
           description: "unnötig"},
@@ -125,9 +212,3 @@ import modal from "@/components/Modal.vue";
       },
     };
 </script defer>
-
-<style>
-.border-0:hover{
-  background: #eeeeee;
-}
-</style>

@@ -8,11 +8,12 @@
                    :eventOrganisation="item.organisation"
                    :eventDate="item.date"
                    :eventLevel="item.level"
-                   :eventTag="item.tags"
+                   :eventTags="item.tags"
                    :eventDescription="item.description"
                    :eventLink="item.link"
-                   :eventCost="item.cost"
+                   :eventCosts="item.costs"
                    :eventAge="item.age"
+                   :eventIncluded="item.included"
                 >
         </EventComp>
       </li>
