@@ -10,14 +10,15 @@
       <hr style="margin-top: 0.5em"-->
 
       <div class="col-lg-12">
-          <card class="border-0" hover shadow body-classes="py-5">
+          <card class="border-15" hover shadow body-classes="py-5">
               <icon name="ni ni-spaceship" type="primary" rounded class="mb-4">
               </icon>
               <h6 class="text-primary text-uppercase">{{eventName}}</h6>
               <p class="description mt-3">{{eventLocation}}</p>
               <div v-for="item in eventTag">
-                  <badge type="primary" rounded>item.eventTag</badge>
+                  <badge type="primary" rounded></badge>
               </div>
+              <h6 class="text-uppercase">{{eventOrganization}}</h6>
               <base-button tag="a" href="#" type="primary" class="mt-4">
                   Erfahre mehr
               </base-button>
@@ -89,10 +90,10 @@ import modal from "@/components/Modal.vue";
           default: "20$/0$",
           description: "Der Kosten für das Event, einmal normal, einmal für Familien, die sich die Teinahmegebühr nicht leisten kônnen"
         }
-        // eventOrganization: {
-        //   type: String,
-        //   default: "Leider ist uns die Organsiation nicht bekannt",
-        //   description: "Die Organsiation die den Event durchführt"}
+        eventOrganization: {
+          type: String,
+          default: "Leider ist uns die Organsiation nicht bekannt",
+          description: "Die Organsiation die den Event durchführt"}
         },
       components: {
         modal
