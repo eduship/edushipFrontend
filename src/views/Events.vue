@@ -68,13 +68,13 @@
 import EventComp from "@/components/EventComp";
 import GmapCustomMarker from "vue2-gmap-custom-marker";
 import Scroll from "./components/ScrollComp.vue";
-import axios from 'axios';
+import axios from "axios";
 
 export default {
   name: "home",
   components: {
     EventComp,
-    'gmap-custom-marker': GmapCustomMarker,
+    "gmap-custom-marker": GmapCustomMarker,
     Scroll
   },
   data() {
@@ -91,7 +91,7 @@ export default {
         },
         {
           lat: 48.396,
-          lng: 9.990
+          lng: 9.99
         },
         {
           lat: 51.226,
@@ -102,7 +102,7 @@ export default {
           lng: 12.317
         },
         {
-          lat: 49.680,
+          lat: 49.68,
           lng: 10.526
         },
         {
@@ -110,39 +110,39 @@ export default {
           lng: 13.262
         },
         {
-          lat: 53.600,
+          lat: 53.6,
           lng: 10.069
         },
         {
           lat: 48.104,
-          lng: 11.600
+          lng: 11.6
         },
         {
           lat: 53.549,
           lng: 10.009
-        },
-        
+        }
       ],
       events: [],
       errors: []
     };
   },
 
-    created() {
-    axios.get(`http://localhost:5000/event/all`)
-    .then(response => {
-      // JSON responses are automatically parsed.
-      this.events = response.data;
-      //console.log(this.events.item);
-      for (var i = 0; i < this.events.length; i++) {
-        var event = this.events[i];
-        event.position = { lat: event.lat, lng: event.long};
-        console.log(event.position);
-      }
-    })
-    .catch(e => {
-      this.errors.push(e);
-    })
+  created() {
+    axios
+      .get(`http://localhost:5000/event/all`)
+      .then(response => {
+        // JSON responses are automatically parsed.
+        this.events = response.data;
+        //console.log(this.events.item);
+        for (var i = 0; i < this.events.length; i++) {
+          var event = this.events[i];
+          event.position = { lat: event.lat, lng: event.long };
+          console.log(event.position);
+        }
+      })
+      .catch(e => {
+        this.errors.push(e);
+      });
   }
-  };
+};
 </script>

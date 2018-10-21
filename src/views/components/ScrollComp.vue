@@ -23,7 +23,7 @@
 
 <script>
 import EventComp from "@/components/EventComp";
-import axios from 'axios';
+import axios from "axios";
 export default {
   name: "ScrollComp",
   components: {
@@ -33,17 +33,19 @@ export default {
     return {
       events: [],
       errors: []
-    }},
+    };
+  },
   created() {
-    axios.get(`http://localhost:5000/event/all`)
-    .then(response => {
-      // JSON responses are automatically parsed.
-      this.events = response.data;
-      //console.log(this.events);
-    })
-    .catch(e => {
-      this.errors.push(e);
-    })
+    axios
+      .get(`http://localhost:5000/event/all`)
+      .then(response => {
+        // JSON responses are automatically parsed.
+        this.events = response.data;
+        //console.log(this.events);
+      })
+      .catch(e => {
+        this.errors.push(e);
+      });
   }
-}
+};
 </script>

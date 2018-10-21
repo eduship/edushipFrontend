@@ -57,7 +57,6 @@ import collaboratorComp from "@/components/collaboratorComp";
 export default {
   components: {
     collaboratorComp
-  },
+  }
 };
-
 </script>
