@@ -9,14 +9,15 @@
       <hr style="margin-top: 0.5em"-->
 
       <div class="col-lg-12">
-          <card class="border-0" hover shadow body-classes="py-5">
+          <card class="border-15" hover shadow body-classes="py-5">
               <icon name="ni ni-spaceship" type="primary" rounded class="mb-4">
               </icon>
               <h6 class="text-primary text-uppercase">{{eventName}}</h6>
               <p class="description mt-3">{{eventLocation}}</p>
               <div v-for="item in eventTag">
-                  <badge type="primary" rounded>item.eventTag</badge>
+                  <badge type="primary" rounded></badge>
               </div>
+              <h6 class="text-uppercase">{{eventOrganization}}</h6>
               <base-button tag="a" href="#" type="primary" class="mt-4">
                   Erfahre mehr
               </base-button>
@@ -54,11 +55,11 @@
         eventDate: {
           type: String,
           default: "30.10-5.11.2018",
-          description: "Der Zeitraum des Events"}
-        // eventOrganization: {
-        //   type: String,
-        //   default: "Leider ist uns die Organsiation nicht bekannt",
-        //   description: "Die Organsiation die den Event durchführt"}
+          description: "Der Zeitraum des Events"},
+         eventOrganization: {
+           type: String,
+           default: "Leider ist uns die Organsiation nicht bekannt",
+           description: "Die Organsiation die den Event durchführt"}
         },
       components: {
       },

@@ -32,13 +32,16 @@
         <div class="container">
 
             <div class="row row-grid align-items-center">
+            <!-- linke Spalte -->
+              <div class="col-md-5">
+                <Scroll></Scroll>
+              </div>
               <!-- rechte Spalte -->
-              <div class="col-md-6 order-md-2">
-                <div>
+              <div class="col-md-7">
                 <gmap-map
                   :center="center"
                   :zoom="5.5"
-                  style="width:200%;  height: 500px;"
+                  style="width:100%;  height: 500px;"
                 >
                 <GmapMarker
                   :key="index"
@@ -54,22 +57,10 @@
                   </gmap-custom-marker-->
                 </gmap-map>
               </div>
-           
-              <!-- linke Spalte -->
-              <div class="col-md-12 order-md-1">
-                <Scroll>
-                <!-- die anderen Components, also die Liste -->
-                <!-- <ul id="eventList">
-                  <li v-for="event in events"> -->
-                  <!-- </li> -->
-                <!-- </ul> -->
-              </Scroll>
-              </div>
             </div>
           </div>
-        </div>
       </section>
-  </div>
+    </div>
 </template>
 
 

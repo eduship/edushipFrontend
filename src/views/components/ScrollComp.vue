@@ -1,10 +1,9 @@
 
 <template>
   <div id="app" align="center">
-    <h1 class="centered">Events</h1>
     <div class="box scrollcomp">
        <li v-for="item in events">
-        <EventComp :eventName="item.name" :eventLocation="item.placeAdress" :eventDate="item.date" :eventLevel="item.level" :eventTag="item.tags"></EventComp>
+        <EventComp :eventName="item.name" :eventOrganization="item.organisation" :eventLocation="item.placeAdress" :eventDate="item.date" :eventLevel="item.level" :eventTag="item.tags"></EventComp>
       </li>
     </div>
   </div>
