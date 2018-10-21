@@ -30,6 +30,11 @@
           <h4 class="modal-title" id="exampleModalLabel">{{ eventName }}</h4>
        </template>
        <div>
+         {{eventDate}}
+         {{eventOrganization}}
+         {{eventDate}}
+         {{eventLink}}
+         {{eventCosts}}
          {{eventLocation}}
             </br>
          {{eventLevel}}
@@ -37,6 +42,8 @@
           {{eventLocation}}
             </br>
           Kategorien: {{evenTag}}
+            </br>
+          Altersklasse: {{eventAge}}
             </br>
 
        </div>
@@ -57,44 +64,48 @@ import modal from "@/components/Modal.vue";
           default: "Code + Design",
           // default: "Leider wurde kein Name von diesem Event gefunden",
           description: "Name des Events"},
+        eventOrganization: {
+            type: String,
+            default: "Leider ist uns die Organsiation nicht bekannt",
+            description: "Die Organsiation die den Event durchführt"},
+        eventLocation: {
+            type: String,
+            default: "Veranstaltungsort",
+            description: "unnötig"},
+        eventDate: {
+            type: String,
+            default: "30.10-5.11.2018",
+            description: "Der Zeitraum des Events"},
         eventLevel: {
           type: String,
           default: "entry",
           description: "Schwierigkeitgrads des Events (entry - advanced - pro)"},
-        eventLocation: {
-          type: String,
-          default: "Musterstadt",
-          description: "Location von dem Event"},
         eventTag: {
           type: String,
           default: "Tag hier",
           description: "unnötig"},
-        eventLocation: {
-          type: String,
-          default: "Veranstaltungsort",
-          description: "unnötig"},
-        eventDate: {
-          type: String,
-          default: "30.10-5.11.2018",
-          description: "Der Zeitraum des Events"},
         eventDescription: {
           type: String,
           default: "Hier könnte Ihre Beschreibung stehen",
           description: "Die Beschreibung des Events"},
+        eventLink: {
+          type: String,
+          default: "Rechts",
+          description: "Der Link zur Webseite"},
+        eventCosts: {
+          type: String,
+          default: "20$/0$",
+          description: "Der Kosten für das Event, einmal normal, einmal für Familien, die sich die Teinahmegebühr nicht leisten kônnen"},
         eventAge: {
           type: String,
           default: "Idk, maybe 12-18?",
           description: "Die Altersspanne für den Event"},
-        eventCost: {
+        eventIncluded: {
           type: String,
-          default: "20$/0$",
-          description: "Der Kosten für das Event, einmal normal, einmal für Familien, die sich die Teinahmegebühr nicht leisten kônnen"
+          default: "",
+          description: "Die Kosten, die der Veranstalter übernimmt."
         }
-        eventOrganization: {
-          type: String,
-          default: "Leider ist uns die Organsiation nicht bekannt",
-          description: "Die Organsiation die den Event durchführt"}
-        },
+      },
       components: {
         modal
       },

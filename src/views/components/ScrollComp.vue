@@ -3,7 +3,17 @@
   <div id="app" align="center">
     <div class="box scrollcomp">
        <li v-for="item in events">
-        <EventComp :eventName="item.name" :eventOrganization="item.organisation" :eventLocation="item.placeAdress" :eventDate="item.date" :eventLevel="item.level" :eventTag="item.tags"></EventComp>
+        <EventComp :eventName="item.name"
+                   :eventLocation="item.placeAdress"
+                   :eventDate="item.date"
+                   :eventLevel="item.level"
+                   :eventTag="item.tags"
+                   :eventDescription="item.description"
+                   :eventLink="item.link"
+                   :eventCost="item.cost"
+                   :eventAge="item.age"
+                >
+        </EventComp>
       </li>
     </div>
   </div>
