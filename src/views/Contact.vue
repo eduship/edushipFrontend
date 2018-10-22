@@ -82,7 +82,6 @@ export default {
       this.submitData.name = this.nameInput;
       this.submitData.email = this.emailInput;
       this.submitData.nachricht = this.nachrichtInput;
-      console.log(this.submitData);
     }
   }
 };

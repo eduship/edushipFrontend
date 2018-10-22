@@ -45,7 +45,6 @@ export default {
     change() {
       // document.getElementById("fact1").classList.add('is-active');
       var x = parseInt(Math.random() * this.randomFact.length);
-      console.log(x);
       document.getElementById(this.buttonId).innerHTML = this.randomFact[x];
     }
   }

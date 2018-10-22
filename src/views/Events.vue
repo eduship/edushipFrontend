@@ -137,7 +137,6 @@ export default {
         for (var i = 0; i < this.events.length; i++) {
           var event = this.events[i];
           event.position = { lat: event.lat, lng: event.long };
-          console.log(event.position);
         }
       })
       .catch(e => {
