@@ -78,15 +78,7 @@
           </div>
           <div class="row">
             <div class="col">
-              Ort:
-            </div>
-            <div class="col">
-              {{eventLocation}}
-            </div>
-          </div>
-          <div class="row">
-            <div class="col">
-              Teilnahegebühr:
+              Teilnahmegebühr:
             </div>
             <div class="col">
               {{eventCosts}}
