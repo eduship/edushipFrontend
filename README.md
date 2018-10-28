@@ -1,6 +1,6 @@
-<h1 id="argon-design-system"><a href="https://www.creative-tim.com/product/vue-argon-design-system">Vue Argon Design System</a></h1>
+<h1 id="eduship"><a href="https://www.eduship.de">Eduship</a></h1>
 
-<p><img src="https://s3.amazonaws.com/creativetim_bucket/products/92/original/opt_argon_vue_thumbnail.jpg?1534236902" alt="Product Gif" /></p>
+<p></p>
 
 <p>Start your development with a Design System for Bootstrap 4. It is open source, free and it features many components that can help you create amazing websites.</p>
 
