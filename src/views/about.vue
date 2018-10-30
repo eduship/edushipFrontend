@@ -45,7 +45,7 @@
       <collaboratorComp v-bind:buttonId = "5" namedC="Jonas" v-bind:imagePath="['img/theme/Jonas.jpg']" v-bind:randomFact="['hat sein Bild zu spät eingereicht','hobbymäßiger Plattenleger', 'Lieblingsfarbe: #b4ffa5', 'Zitat:Ich kann schon HTML', 'Lieblingssong: Spaghetti Love']"> </collaboratorComp>
     </div>
     <div class="col-sm">
-      <collaboratorComp v-bind:buttonId = "6" namedC="Ruben" v-bind:imagePath="['img/theme/Ruben.jpg']" v-bind:randomFact="['Hasst php debugging', 'Mag NodeJS nicht' , 'Lieblingsfarben: #FD602E, #9608C6', 'Zitat:Linux ist das sicherste Betriebssystem','Nutzt gerne Programme, die er dank der Uni umsonst kriegt. (Natürlich nur privat)']"> </collaboratorComp>
+      <collaboratorComp v-bind:buttonId = "6" namedC="Ruben" v-bind:imagePath="['img/theme/Ruben.jpg']" v-bind:randomFact="['Hasst php debugging', 'Mag NodeJS nicht' , 'Lieblingsfont: Segoe UI', 'Lieblingsfilm: Tron (Legacy)', 'Lieblingsfarben: #FD602E, #9608C6', 'Zitat:Linux ist das sicherste Betriebssystem','Nutzt gerne Programme, die er dank der Uni umsonst kriegt. (Natürlich nur privat)']"> </collaboratorComp>
     </div>
   </div>
 </div>

@@ -96,7 +96,7 @@
           </br>
           <h5 style="primary"> {{eventDescription}} </h5>
           </br>
-          <a v-bind:href="this.eventLink">
+          <a v-bind:href="this.eventLink" target="_blank">
             <base-button type="primary">Jetzt anmelden</base-button>
           </a>
        <template slot="footer">
@@ -113,7 +113,7 @@ export default {
   props: {
     eventName: {
       type: String,
-      default: "Code + Design",
+      default: "Dein Camp!",
       // default: "Leider wurde kein Name von diesem Event gefunden",
       description: "Name des Events"
     },
@@ -127,7 +127,7 @@ export default {
     eventLocation: {
       type: String,
       default: "Veranstaltungsort",
-      description: "unnötig"
+      description: "wichtig"
     },
     eventDate: {
       type: String,
@@ -183,7 +183,6 @@ export default {
     close: function(event) {
       console.log(this.modal0);
       this.modal0 = false;
-      location.reload();
     }
   }
 };
