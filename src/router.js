@@ -8,7 +8,7 @@ import Register from "./views/Register.vue";
 import Profile from "./views/Profile.vue";
 
 import Landing from "./views/Landing.vue";
-import About from "./views/About.vue";
+import About from "./views/about.vue";
 import Contact from "./views/Contact.vue";
 import Events from "./views/Events.vue";
 
