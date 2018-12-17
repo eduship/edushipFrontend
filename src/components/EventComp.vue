@@ -175,7 +175,6 @@ import modal from "@/components/Modal.vue";
       },
       methods:{
         close: function (event) {
-          console.log(this.modal0);
           this.modal0 = false;
           location.reload();
         }
