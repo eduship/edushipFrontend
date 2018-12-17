@@ -91,11 +91,11 @@
                     <div class="col-md-6 order-md-2">
                       <icon name="ni ni-fat-add" class="mb-5" size="lg" type="primary" shadow
                             rounded></icon>
-                      <h3 class="font-weight-light mb-2" style="color: primary">Werden Sie Veranstalter!</h3>
-                      <h4 class="mb-5 font-weight-light">Sind Sie Veranstalter einer Weiterbildungsseminar für digitalinteressierte Jugendliche? Dann melden Sie sich bei uns an! Über eduship erreichen wir viele Jugendliche, die normalerweise unterrepräsentiert sind, wie Mädchen, Geflüchtete oder Jugenliche aus einkommensschwächeren Haushalten.</h4>
+                      <h3 class="font-weight-light mb-2" style="color: primary">Werde Veranstalter!</h3>
+                      <h4 class="mb-5 font-weight-light">Bist du Veranstalter einer Veranstaltung für digitalinteressierte Jugendliche? Dann melden Sie sich bei uns an! Über eduship erreichen wir viele Jugendliche, die normalerweise unterrepräsentiert sind, wie Mädchen, Geflüchtete oder Jugenliche aus einkommensschwächeren Haushalten.</h4>
                     </div>
                     <!-- linke Spalte -->
-                    <div class="col-md-6 order-md-1" style="margin-top: 0px">
+                    <div class="col-md-4 order-md-1" style="margin-top: 0px">
                       <img src="img/theme/Sign_up.png" class="img-fluid floating">
                     </div>
                   </div>

@@ -66,19 +66,19 @@ export default {
   name: "contact",
   components: {},
   data() {
-    return{
-      submitData:{
+    return {
+      submitData: {
         name: "",
         email: "",
-        nachricht: "",
+        nachricht: ""
       },
       nameInput: "",
       emailInput: "",
-      nachrichtInput: "",
+      nachrichtInput: ""
     };
   },
   methods: {
-    getFormValues(){
+    getFormValues() {
       this.submitData.name = this.nameInput;
       this.submitData.email = this.emailInput;
       this.submitData.nachricht = this.nachrichtInput;
@@ -86,5 +86,4 @@ export default {
     }
   }
 };
-
 </script>

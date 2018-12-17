@@ -12,12 +12,13 @@
           <card class="border-15" hover shadow body-classes="py-5">
               <icon name="ni ni-spaceship" type="primary" rounded class="mb-4">
               </icon>
-              <h6 class="text-primary text-uppercase">{{eventName}}</h6>
+              <h4 class="text-primary text-uppercase">{{eventName}}</h4>
+              <p class="description mt-3">{{eventDate}}</p>
               <p class="description mt-3">{{eventLocation}}</p>
               <div v-for="item in eventTags">
                   <badge type="primary" rounded></badge>
               </div>
-              <h6 class="text-uppercase">{{eventOrganization}}</h6>
+              <h6 class="text-primary text-uppercase">{{eventOrganisation}}</h6>
               <div class="Event" @click="modal0 = true">
                 <base-button tag="a" type="primary" class="mt-4">
                   <div class="text-white">
@@ -77,15 +78,7 @@
           </div>
           <div class="row">
             <div class="col">
-              Ort:
-            </div>
-            <div class="col">
-              {{eventLocation}}
-            </div>
-          </div>
-          <div class="row">
-            <div class="col">
-              Teilnahegebühr:
+              Teilnahmegebühr:
             </div>
             <div class="col">
               {{eventCosts}}
@@ -103,7 +96,7 @@
           </br>
           <h5 style="primary"> {{eventDescription}} </h5>
           </br>
-          <a v-bind:href="this.eventLink">
+          <a v-bind:href="this.eventLink" target="_blank">
             <base-button type="primary">Jetzt anmelden</base-button>
           </a>
        <template slot="footer">
@@ -115,69 +108,82 @@
 
 <script defer>
 import modal from "@/components/Modal.vue";
-    export default {
-      name: "EventComp",
-      props: {
-        eventName: {
-          type: String,
-          default: "Code + Design",
-          // default: "Leider wurde kein Name von diesem Event gefunden",
-          description: "Name des Events"},
-        eventOrganization: {
-            type: String,
-            default: "Leider ist uns die Organsiation nicht bekannt",
-            description: "Die Organsiation die den Event durchführt"},
-        eventLocation: {
-            type: String,
-            default: "Veranstaltungsort",
-            description: "unnötig"},
-        eventDate: {
-            type: String,
-            default: "30.10-5.11.2018",
-            description: "Der Zeitraum des Events"},
-        eventLevel: {
-          type: String,
-          default: "entry",
-          description: "Schwierigkeitgrads des Events (entry - advanced - pro)"},
-        eventTags: {
-          type: String,
-          default: "Tag hier",
-          description: "unnötig"},
-        eventDescription: {
-          type: String,
-          default: "Hier könnte Ihre Beschreibung stehen",
-          description: "Die Beschreibung des Events"},
-        eventLink: {
-          type: String,
-          default: "Rechts",
-          description: "Der Link zur Webseite"},
-        eventCosts: {
-          type: String,
-          default: "20$/0$",
-          description: "Der Kosten für das Event, einmal normal, einmal für Familien, die sich die Teinahmegebühr nicht leisten kônnen"},
-        eventAge: {
-          type: String,
-          default: "Idk, maybe 12-18?",
-          description: "Die Altersspanne für den Event"},
-        eventIncluded: {
-          type: String,
-          default: "",
-          description: "Die Kosten, die der Veranstalter übernimmt."
-        }
-      },
-      components: {
-        modal
-      },
-      data: function () {
-        return {
-          modal0: false
-        }
-      },
-      methods:{
-        close: function (event) {
-          this.modal0 = false;
-          location.reload();
-        }
-      },
+export default {
+  name: "EventComp",
+  props: {
+    eventName: {
+      type: String,
+      default: "Dein Camp!",
+      // default: "Leider wurde kein Name von diesem Event gefunden",
+      description: "Name des Events"
+    },
+
+    eventOrganisation: {
+      type: String,
+      default: "Leider ist uns die Organsiation nicht bekannt",
+      description: "Die Organsiation die das Event durchführt"
+    },
+
+    eventLocation: {
+      type: String,
+      default: "Veranstaltungsort",
+      description: "wichtig"
+    },
+    eventDate: {
+      type: String,
+      default: "30.10-5.11.2018",
+      description: "Der Zeitraum des Events"
+    },
+    eventLevel: {
+      type: String,
+      default: "entry",
+      description: "Schwierigkeitgrads des Events (entry - advanced - pro)"
+    },
+    eventTags: {
+      type: String,
+      default: "Tag hier",
+      description: "unnötig"
+    },
+    eventDescription: {
+      type: String,
+      default: "Hier könnte Ihre Beschreibung stehen",
+      description: "Die Beschreibung des Events"
+    },
+    eventLink: {
+      type: String,
+      default: "Rechts",
+      description: "Der Link zur Webseite"
+    },
+    eventCosts: {
+      type: String,
+      default: "20$/0$",
+      description:
+        "Der Kosten für das Event, einmal normal, einmal für Familien, die sich die Teinahmegebühr nicht leisten kônnen"
+    },
+    eventAge: {
+      type: String,
+      default: "Idk, maybe 12-18?",
+      description: "Die Altersspanne für den Event"
+    },
+    eventIncluded: {
+      type: String,
+      default: "",
+      description: "Die Kosten, die der Veranstalter übernimmt."
+    }
+  },
+  components: {
+    modal
+  },
+  data: function() {
+    return {
+      modal0: false
     };
+  },
+  methods: {
+    close: function(event) {
+      console.log(this.modal0);
+      this.modal0 = false;
+    }
+  }
+};
 </script defer>

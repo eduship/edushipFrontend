@@ -28,10 +28,10 @@
             </section>
   <div class="row">
     <div class="col-sm">
-      <collaboratorComp namedC="Elisabeth" v-bind:randomFact = "['Lieblingsspitzname: Elsbet', 'Lieblingsfarbe: #033A0B', 'Lieblingsbuch: Harry Potter', 'hört gerne: Känguru Chroniken']"> </collaboratorComp>
+      <collaboratorComp namedC="Elisabeth" v-bind:imagePath="['img/theme/Elisabeth.jpg']" v-bind:randomFact = "['Lieblingsspitzname: Elsbet', 'Lieblingsfarbe: #033A0B', 'Lieblingsbuch: Harry Potter', 'hört gerne: Känguru Chroniken']"> </collaboratorComp>
     </div>
     <div class="col-sm">
-      <collaboratorComp v-bind:buttonId = "2" v-bind:imagePath="['img/theme/Moritz.jpg']" namedC="Moritz" v-bind:randomFact="['Lieblingsfarbe: #F16027', 'Lieblingsbiermarke: Oettinger', 'Lieblingsspruch: Die Standardstandart eines Flamingos ist einbeinig', 'war Mensch der Woche in der Bild der Frau']"> </collaboratorComp>
+      <collaboratorComp v-bind:buttonId = "2" v-bind:imagePath="['img/theme/Moritz.jpg']" namedC="Moritz" v-bind:randomFact="['war Mensch der Woche in der Bild der Frau', 'Lieblingsfarbe: #F16027', 'Lieblingsbiermarke: Oettinger', 'Die Standardstandart eines Flamingos ist einbeinig']"> </collaboratorComp>
     </div>
     <div class="col-sm">
       <collaboratorComp namedC="Jana" v-bind:imagePath="['img/theme/Jana.jpg']" v-bind:buttonId = "3" v-bind:randomFact = "['Lieblingsfarbe: #912453', 'Lieblingsfilm: Forrest Gump', 'Lieblingsbuch: Harry Potter', 'Lieblingsserie: Game of Thrones']"> </collaboratorComp>
@@ -39,13 +39,13 @@
   </div>
   <div class="row">
     <div class="col-sm">
-      <collaboratorComp v-bind:imagePath="['img/theme/Fynn.jpg']" v-bind:buttonId = "4" namedC="Fynn" v-bind:randomFact="['war im Silicon Valley :)', 'Lieblingsfarbe: #6B6B47', 'mag Anzüge', 'Lieblingsfilm: Forrest Gump', 'Lieblingssänger: Ed Sheeran']"> </collaboratorComp>
+      <collaboratorComp v-bind:imagePath="['img/theme/Fynn.jpg']" v-bind:buttonId = "4" namedC="Fynn" v-bind:randomFact="['mag Anzüge', 'war im Silicon Valley :)', 'Lieblingsfarbe: #6B6B47', 'Lieblingsfilm: Forrest Gump', 'Lieblingssänger: Ed Sheeran','Kann die ersten 30 Stellen von PI auswendig']"> </collaboratorComp>
     </div>
     <div class="col-sm">
-      <collaboratorComp v-bind:buttonId = "5" namedC="Jonas" v-bind:randomFact="['Fakt fehlt']"> </collaboratorComp>
+      <collaboratorComp v-bind:buttonId = "5" namedC="Jonas" v-bind:imagePath="['img/theme/Jonas.jpg']" v-bind:randomFact="['hat sein Bild zu spät eingereicht','hobbymäßiger Plattenleger', 'Lieblingsfarbe: #b4ffa5', 'Zitat:Ich kann schon HTML', 'Lieblingssong: Spaghetti Love']"> </collaboratorComp>
     </div>
     <div class="col-sm">
-      <collaboratorComp v-bind:buttonId = "6" namedC="Ruben" v-bind:randomFact="['Fakt fehlt']"> </collaboratorComp>
+      <collaboratorComp v-bind:buttonId = "6" namedC="Ruben" v-bind:imagePath="['img/theme/Ruben.jpg']" v-bind:randomFact="['Hasst php debugging', 'Mag NodeJS nicht' , 'Lieblingsfont: Segoe UI', 'Lieblingsfilm: Tron (Legacy)', 'Lieblingsfarben: #FD602E, #9608C6', 'Zitat:Linux ist das sicherste Betriebssystem','Nutzt gerne Programme, die er dank der Uni umsonst kriegt. (Natürlich nur privat)']"> </collaboratorComp>
     </div>
   </div>
 </div>
@@ -57,7 +57,6 @@ import collaboratorComp from "@/components/collaboratorComp";
 export default {
   components: {
     collaboratorComp
-  },
+  }
 };
-
 </script>
