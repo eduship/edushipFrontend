@@ -18,7 +18,7 @@
                   <div class="row">
                       <div class="col-lg-6">
                           <h1 class="display-3  text-white">Events finden</h1>
-                          <p class="lead  text-white">Unten auf der Karte sind alle Events von denen wir wissen.</p>
+                          <p class="lead  text-white">Unten auf der Karte sind alle Events, von denen wir wissen.</p>
                           <p class="lead text-white">Wenn du noch mehr kennst, dann
                             <a class="lead text" href="#/Contact" style="color: #a3b6ff">kontaktiere uns </a>.
                           </p>
