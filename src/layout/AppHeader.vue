@@ -32,6 +32,11 @@
 
                       <span class="nav-link-inner--text">Kontakt</span>
                 </a>
+
+                <a slot="title" href="#/login" class="nav-link" data-toggle="dropdown" role="button">
+
+                    <span class="nav-link-inner--text">Veranstalterbereich</span>
+                </a>
             </ul>
 
 

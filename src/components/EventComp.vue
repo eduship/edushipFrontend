@@ -181,7 +181,6 @@ export default {
   },
   methods: {
     close: function(event) {
-      console.log(this.modal0);
       this.modal0 = false;
     }
   }

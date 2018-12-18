@@ -1,71 +1,58 @@
 <template>
-    <section class="section section-shaped section-lg my-0">
-        <div class="shape shape-style-1 bg-gradient-default">
-            <span></span>
-            <span></span>
-            <span></span>
-            <span></span>
-            <span></span>
-            <span></span>
-            <span></span>
-            <span></span>
-        </div>
-        <div class="container pt-lg-md">
-            <div class="row justify-content-center">
-                <div class="col-lg-5">
-                    <card type="secondary" shadow
-                          header-classes="bg-white pb-5"
-                          body-classes="px-lg-5 py-lg-5"
-                          class="border-0">
-                        <template>
-                            <div class="text-muted text-center mb-3">
-                                <small>Sign in with</small>
-                            </div>
-                            <div class="btn-wrapper text-center">
-                                <base-button type="neutral">
-                                    <img slot="icon" src="img/icons/common/github.svg">
-                                    Github
-                                </base-button>
-
-                                <base-button type="neutral">
-                                    <img slot="icon" src="img/icons/common/google.svg">
-                                    Google
-                                </base-button>
-                            </div>
-                        </template>
-                        <template>
-                            <div class="text-center text-muted mb-4">
-                                <small>Or sign in with credentials</small>
-                            </div>
-                            <form role="form">
+  <div>
+      <div class="position-relative">
+          <!-- shape Hero -->
+          <section class="section-shaped my-0">
+              <div class="shape shape-primary shape-skew">
+                  <span></span>
+                  <span></span>
+                  <span></span>
+                  <span></span>
+                  <span></span>
+                  <span></span>
+                  <span></span>
+                  <span></span>
+                  <span></span>
+              </div>
+              <div class="container shape-container d-flex">
+                <div class="col px-0">
+                    <div class="row">
+                        <div class="col-lg-6">
+                            <h1 class="display-3 text-white">Veranstalter Login</h1>
+                        </div>
+                    </div>
+                </div>
+              </div>
+          </section>
+    </div>
+    <section class="section section-lg pt-lg-0 section-contact-us">
+        <div class="container">
+            <div class="row justify-content-center mt--300">
+                <div class="col-lg-8">
+                    <card gradient="secondary" shadow body-classes="p-lg-5">
                                 <base-input alternative
                                             class="mb-3"
                                             placeholder="Email"
+                                            type="email"
+                                            id="defaultLoginFormEmail"
                                             addon-left-icon="ni ni-email-83">
                                 </base-input>
                                 <base-input alternative
                                             type="password"
                                             placeholder="Password"
+                                            id="defaultLoginFormPassword"
                                             addon-left-icon="ni ni-lock-circle-open">
                                 </base-input>
-                                <base-checkbox>
-                                    Remember me
-                                </base-checkbox>
                                 <div class="text-center">
-                                    <base-button type="primary" class="my-4">Sign In</base-button>
+                                    <base-button type="primary" class="my-4">Anmelden</base-button>
                                 </div>
-                            </form>
-                        </template>
                     </card>
                     <div class="row mt-3">
                         <div class="col-6">
-                            <a href="#" class="text-light">
-                                <small>Forgot password?</small>
-                            </a>
                         </div>
                         <div class="col-6 text-right">
-                            <a href="#" class="text-light">
-                                <small>Create new account</small>
+                            <a href="#/Register" class="text-light">
+                                <small>Als Veranstalter registrieren</small>
                             </a>
                         </div>
                     </div>
@@ -73,7 +60,9 @@
             </div>
         </div>
     </section>
+  </div>
 </template>
+
 <script>
 export default {};
 </script>

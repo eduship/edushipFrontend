@@ -11,6 +11,7 @@ import Landing from "./views/Landing.vue";
 import About from "./views/about.vue";
 import Contact from "./views/Contact.vue";
 import Events from "./views/Events.vue";
+import Create from "./views/Create.vue";
 
 Vue.use(Router);
 
@@ -86,6 +87,15 @@ export default new Router({
       components: {
         header: AppHeader,
         default: Contact,
+        footer: AppFooter
+      }
+    },
+    {
+      path: "/create",
+      name: "create",
+      components:{
+        header: AppHeader,
+        default: Create,
         footer: AppFooter
       }
     }

@@ -4,6 +4,7 @@ import Header from "./layout/starter/StarterHeader";
 import Footer from "./layout/starter/StarterFooter";
 import Starter from "./views/Starter.vue";
 
+
 Vue.use(Router);
 
 export default new Router({
@@ -15,6 +16,7 @@ export default new Router({
         header: Header,
         default: Starter,
         footer: Footer
+        flatPicker
       }
     }
   ]

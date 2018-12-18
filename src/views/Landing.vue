@@ -93,6 +93,9 @@
                             rounded></icon>
                       <h3 class="font-weight-light mb-2" style="color: primary">Werde Veranstalter!</h3>
                       <h4 class="mb-5 font-weight-light">Bist du Veranstalter einer Veranstaltung für digitalinteressierte Jugendliche? Dann melden Sie sich bei uns an! Über eduship erreichen wir viele Jugendliche, die normalerweise unterrepräsentiert sind, wie Mädchen, Geflüchtete oder Jugenliche aus einkommensschwächeren Haushalten.</h4>
+                      <a href="#/Register">
+                          <base-button type="primary">Registriere dich!</base-button>
+                      </a>
                     </div>
                     <!-- linke Spalte -->
                     <div class="col-md-4 order-md-1" style="margin-top: 0px">
