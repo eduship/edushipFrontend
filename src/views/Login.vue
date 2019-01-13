@@ -30,21 +30,20 @@
             <div class="row justify-content-center mt--300">
                 <div class="col-lg-8">
                     <card gradient="secondary" shadow body-classes="p-lg-5">
-                                <base-input alternative
-                                            class="mb-3"
+                                <base-input
                                             placeholder="Email"
                                             type="email"
-                                            id="defaultLoginFormEmail"
+                                            id="username"
                                             addon-left-icon="ni ni-email-83">
                                 </base-input>
-                                <base-input alternative
+                                <base-input
                                             type="password"
                                             placeholder="Password"
-                                            id="defaultLoginFormPassword"
+                                            id="password"
                                             addon-left-icon="ni ni-lock-circle-open">
                                 </base-input>
                                 <div class="text-center">
-                                    <base-button type="primary" class="my-4">Anmelden</base-button>
+                                    <base-button type="primary" class="my-4" v-on:click="login()">Anmelden</base-button>
                                 </div>
                     </card>
                     <div class="row mt-3">
@@ -64,7 +63,30 @@
 </template>
 
 <script>
-export default {};
+import axios from "axios";
+
+export default {
+  name: "login",
+  components: {
+  },
+  methods: {
+    login() {
+      console.log("da");
+        axios.post('http://localhost:5000/login', {
+          email: document.getElementById('username').value,
+          password: document.getElementById('password').value
+        })
+        .then(function (response) {
+          console.log(response);
+          window.location.href = "#/create";
+        })
+        .catch(function (error) {
+          console.log(error);
+        });
+      }
+    }
+};
+
 </script>
 <style>
 </style>

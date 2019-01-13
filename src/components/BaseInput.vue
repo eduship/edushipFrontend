@@ -130,10 +130,10 @@ export default {
       let value = evt.target.value;
       this.$emit("input", value);
     },
-    onFocus(value) {
-      this.focused = true;
-      this.$emit("focus", value);
-    },
+    // onFocus(value) {
+    //   this.focused = true;
+    //   this.$emit("focus", value);
+    // },
     onBlur(value) {
       this.focused = false;
       this.$emit("blur", value);
