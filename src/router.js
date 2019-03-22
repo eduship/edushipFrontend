@@ -12,6 +12,7 @@ import About from "./views/about.vue";
 import Contact from "./views/Contact.vue";
 import Events from "./views/Events.vue";
 import Create from "./views/Create.vue";
+import Newsletter from "./views/Newsletter.vue";
 
 Vue.use(Router);
 
@@ -87,6 +88,15 @@ export default new Router({
       components: {
         header: AppHeader,
         default: Contact,
+        footer: AppFooter
+      }
+    },
+    {
+      path: "/newsletter",
+      name: "newsletter",
+      components: {
+        header: AppHeader,
+        default: Newsletter,
         footer: AppFooter
       }
     },

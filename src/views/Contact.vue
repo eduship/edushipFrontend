@@ -19,21 +19,7 @@
                       <div class="row">
                           <div class="col-lg-6">
                               <h1 class="display-3  text-white">Kontakt</h1>
-                              <h2>Kontaktformular</h2>
-                              <p class="lead  text-white">Melde dich zu unserem E-Mail-Newsletter an.
-                                  So informieren wir dich direkt über neue Events, die du nicht vepassen solltest und halten dich auf dem laufenden mit neuen Funktionen unserer Website.
-                                  Selbstverständlich kannst du dich jederzeit wieder abmelden. Durch das klicken auf abschicken </p>
-                          </div>
-                      </div>
-                  </div>
-              </div>
-              <div class="container shape-container d-flex">
-                  <div class="col px-0">
-                      <div class="row">
-                          <div class="col-lg-6">
-                              <h1 class="display-3  text-white">Kontakt</h1>
-                              <h2>Kontaktformular</h2>
-                              <p class="lead  text-white">Du hast weitere Fragen, Anregungen oder Kritik? Dann melde dich bei uns!</p>
+                              <p class="lead  text-white">Du hast weitere Fragen, Anregungen oder Kritik? Dann melde dich bei uns! Oder trage dich in unseren <a href="#/newsletter" style="color: #11cdef"> E-Mail-Newsletter</a> ein!</p>
                           </div>
                       </div>
                   </div>
@@ -54,7 +40,7 @@
                                     >
                         </base-input>
                         <base-input alternative
-                                    placeholder="Email Adresse"
+                                    placeholder="E-Mail Adresse"
                                     addon-left-icon="ni ni-email-83"
                                     v-model="emailInput">
                         </base-input>
