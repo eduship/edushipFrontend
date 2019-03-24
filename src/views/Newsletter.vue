@@ -37,32 +37,45 @@
                 <base-alert type="primary">
                 <i>Achtung!</i> Mit deinem Klick auf "Absenden" stimmst du zu, dass deine E-Mail-Adresse auf unseren Servern gespeichert wird und durch unser Team eingesehen werden kann. Wir geben deine Adresse nicht an Dritte weiter und löschen sie gerne auf deinen Wunsch.
                 </base-alert>
-                <base-input alternative placeholder="name@example.com" v-model="mailInput"></base-input>
+                <base-input alternative placeholder="name@example.com" v-model="mailInput" id="email"></base-input>
                 <base-button outline type="primary" @click.prevent="getmail()">Absenden</base-button>
-                <div style="margin-left: 0.2em" >{{ this.errors }}</div>
+                <div style="margin-left: 0.2em" id="errors">{{ this.errors }}</div>
             </div>
         </div>
         </div>
     </div>
 </template>
 <script>
-    export default {
-        name: "newsletter",
-        components: {},
-        data() {
-            return {
-                errors: "",
-                mailInput: ""
-            };
-        },
-        methods: {
-            getmail() {
-                const re = /^(([^<>()\[\]\\.,;:\s@"]+(\.[^<>()\[\]\\.,;:\s@"]+)*)|(".+"))@((\[[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\])|(([a-zA-Z\-0-9]+\.)+[a-zA-Z]{2,}))$/;
-                if(this.mailInput.match(re)){
-                    this.errors = "Sent.";
-                    console.log(this.mailInput);
-                }else this.errors = "Deine E-Mail Adresse ist keine E-Mail Adresse.";
-            }
-        }
+export default {
+  name: "newsletter",
+  components: {},
+  data() {
+    return {
+      errors: "",
+      mailInput: ""
     };
+  },
+  methods: {
+    getmail() {
+      const re = /^(([^<>()\[\]\\.,;:\s@"]+(\.[^<>()\[\]\\.,;:\s@"]+)*)|(".+"))@((\[[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\])|(([a-zA-Z\-0-9]+\.)+[a-zA-Z]{2,}))$/;
+      if (this.mailInput.match(re)) {
+          //console.log(this.mailInput.replace("@","(at)"));
+
+          var xhttp = new XMLHttpRequest();
+          xhttp.onreadystatechange = function() {
+              if (this.readyState == 4 && this.status == 200) {
+                  if(this.responseText == "1"){
+                      document.getElementById("errors").innerHTML = "Abgeschickt!";
+                      document.getElementById("email").value = "";
+                  }
+                  else document.getElementById("errors").innerHTML = "Es gab leider einen Fehler!";
+              }
+          };
+          xhttp.open("GET", "http://eduship.kaiseritea.de/addmail.php?" + "email=" + this.mailInput.replace("@","(at)"), true);
+          xhttp.send();
+
+      } else document.getElementById("errors").innerHTML = "Deine E-Mail Adresse ist keine E-Mail Adresse.";
+    }
+  }
+};
 </script>

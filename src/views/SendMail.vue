@@ -18,8 +18,10 @@
                   <div class="col px-0">
                       <div class="row">
                           <div class="col-lg-6">
-                              <h1 class="display-3  text-white">Kontakt</h1>
-                              <p class="lead  text-white">Du hast weitere Fragen, Anregungen oder Kritik? Dann melde dich bei uns! Oder trage dich in unseren <a href="#/newsletter" style="color: #11cdef"> E-Mail-Newsletter</a> ein!</p>
+                              <h1 class="display-3  text-white">Coole E-mails senden!</h1>
+                              <p class="lead  text-white">Yooooooo wir können jetzt coole Mails senden!
+                                  Die Mails werden automatisch an alle in der Datenbank eingetragenen Mails gesendet.
+                                  Antworten werden an eduship1@gmail.com geleitet.</p>
                           </div>
                       </div>
                   </div>
@@ -32,27 +34,28 @@
             <div class="row justify-content-center mt--300">
                 <div class="col-lg-8">
                     <card gradient="secondary" shadow body-classes="p-lg-5">
-                        <base-input class="mt-5"
+                        Gib hier die Daten ein:
+                        <base-input class="mt-3"
                                     alternative
-                                    placeholder="Name"
+                                    placeholder="Betreff"
                                     addon-left-icon="ni ni-user-run"
-                                    v-model="nameInput"
+                                    v-model="subjectInput"
                                     >
                         </base-input>
                         <base-input alternative
-                                    placeholder="E-Mail Adresse"
                                     addon-left-icon="ni ni-email-83"
-                                    v-model="emailInput">
+                                    v-model="fromEmailInput">
                         </base-input>
                         <base-input class="mb-4">
                                 <textarea class="form-control form-control-alternative" name="name" rows="4"
-                                          cols="80" placeholder="Schreib' uns eine Nachricht..."
+                                          cols="80" placeholder="Schreib' hier deine Message!"
                                           v-model="nachrichtInput"></textarea>
                         </base-input>
                         <base-button type="primary" round block size="lg" color="#553B91" @click.prevent="getFormValues()">
-                            Nachricht abschicken
+                            E-Mail abschicken
                         </base-button>
                     </card>
+                    <div id="errors"></div>
                 </div>
             </div>
         </div>
@@ -68,21 +71,37 @@ export default {
   data() {
     return {
       submitData: {
-        name: "",
-        email: "",
+        subject: "",
+        fromEmail: "",
         nachricht: ""
       },
-      nameInput: "",
-      emailInput: "",
-      nachrichtInput: ""
+        subjectInput: "",
+        fromEmailInput: "team@eduship.de",
+        nachrichtInput: ""
     };
   },
   methods: {
     getFormValues() {
-      this.submitData.name = this.nameInput;
-      this.submitData.email = this.emailInput;
+      this.submitData.subject = this.subjectInput;
+      this.submitData.fromEmail = this.fromEmailInput;
       this.submitData.nachricht = this.nachrichtInput;
-      console.log(this.submitData);
+
+        var xhttp = new XMLHttpRequest();
+        xhttp.onreadystatechange = function() {
+            if (this.readyState == 4 && this.status == 200) {
+                console.log(this.responseText);
+                if(this.responseText == ""){
+                    document.getElementById("errors").innerHTML = "Abgeschickt!";
+                    document.getElementById("email").value = "";
+                }
+                else document.getElementById("errors").innerHTML = "Es gab leider einen Fehler!";
+            }
+        };
+        xhttp.open("GET", "http://eduship.kaiseritea.de/sendmail.php?" +
+            "subject=" + this.submitData.subject + "&&" +
+            "nachricht=" + this.submitData.nachricht + "&&" +
+            "from=" + this.submitData.fromEmail);
+        xhttp.send();
     }
   }
 };

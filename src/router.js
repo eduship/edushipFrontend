@@ -12,7 +12,10 @@ import About from "./views/about.vue";
 import Contact from "./views/Contact.vue";
 import Events from "./views/Events.vue";
 import Create from "./views/Create.vue";
+
 import Newsletter from "./views/Newsletter.vue";
+import SendMail from "./views/SendMail.vue";
+
 
 Vue.use(Router);
 
@@ -101,9 +104,18 @@ export default new Router({
       }
     },
     {
+      path: "/sendmail_muesstepasswortgeschuetztsein",
+      name: "sendmail",
+      components: {
+        header: AppHeader,
+        default: SendMail,
+        footer: AppFooter
+      }
+    },
+    {
       path: "/create",
       name: "create",
-      components:{
+      components: {
         header: AppHeader,
         default: Create,
         footer: AppFooter

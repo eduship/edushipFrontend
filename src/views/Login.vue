@@ -67,26 +67,25 @@ import axios from "axios";
 
 export default {
   name: "login",
-  components: {
-  },
+  components: {},
   methods: {
     login() {
       console.log("da");
-        axios.post('http://localhost:5000/login', {
-          email: document.getElementById('username').value,
-          password: document.getElementById('password').value
+      axios
+        .post("http://localhost:5000/login", {
+          email: document.getElementById("username").value,
+          password: document.getElementById("password").value
         })
-        .then(function (response) {
+        .then(function(response) {
           console.log(response);
           window.location.href = "#/create";
         })
-        .catch(function (error) {
+        .catch(function(error) {
           console.log(error);
         });
-      }
     }
+  }
 };
-
 </script>
 <style>
 </style>
