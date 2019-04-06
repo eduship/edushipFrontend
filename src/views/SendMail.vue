@@ -82,9 +82,9 @@ export default {
   },
   methods: {
     getFormValues() {
-      this.submitData.subject = this.subjectInput;
-      this.submitData.fromEmail = this.fromEmailInput;
-      this.submitData.nachricht = this.nachrichtInput;
+      var subject = this.subjectInput;
+      var fromEmail = this.fromEmailInput;
+      var nachricht = this.nachrichtInput;
 
         var xhttp = new XMLHttpRequest();
         xhttp.onreadystatechange = function() {
@@ -98,9 +98,9 @@ export default {
             }
         };
         xhttp.open("GET", "http://eduship.kaiseritea.de/sendmail.php?" +
-            "subject=" + this.submitData.subject + "&&" +
-            "nachricht=" + this.submitData.nachricht + "&&" +
-            "from=" + this.submitData.fromEmail);
+            "subject=" + subject + "&&" +
+            "nachricht=" + nachricht + "&&" +
+            "from=" + fromEmail);
         xhttp.send();
     }
   }
