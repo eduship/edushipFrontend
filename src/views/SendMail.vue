@@ -89,7 +89,7 @@ export default {
                 else document.getElementById("errors").innerHTML = "Es gab leider einen Fehler!";
             }
         };
-        xhttp.open("GET", "http://eduship.kaiseritea.de/sendmail.php?" +
+        xhttp.open("GET", "https://kaiseritea.de/eduship/sendmail.php?" +
             "subject=" + subject + "&&" +
             "nachricht=" + nachricht + "&&" +
             "from=" + fromEmail);

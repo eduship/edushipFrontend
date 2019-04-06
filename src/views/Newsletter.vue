@@ -71,7 +71,7 @@ export default {
                   else document.getElementById("errors").innerHTML = "Es gab leider einen Fehler!";
               }
           };
-          xhttp.open("GET", "http://eduship.kaiseritea.de/addmail.php?" + "email=" + this.mailInput.replace("@","(at)"), true);
+          xhttp.open("GET", "https://kaiseritea.de/eduship/addmail.php?" + "email=" + this.mailInput.replace("@","(at)"), true);
           xhttp.send();
 
       } else document.getElementById("errors").innerHTML = "Deine E-Mail Adresse ist keine E-Mail Adresse.";
