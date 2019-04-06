@@ -37,7 +37,7 @@ export default {
   },
   created() {
     axios
-      .get(`http://localhost:5000/event/all`)
+      .get(`https://api.eduship.de/event/all`)
       .then(response => {
         // JSON responses are automatically parsed.
         this.events = response.data;
