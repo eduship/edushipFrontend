@@ -84,7 +84,7 @@ export default {
     getFormValues() {
       var subject = this.subjectInput;
       var fromEmail = this.fromEmailInput;
-      var submitData.nachricht = this.nachrichtInput;
+      var nachricht = this.nachrichtInput;
 
         var xhttp = new XMLHttpRequest();
         xhttp.onreadystatechange = function() {
@@ -100,7 +100,7 @@ export default {
         xhttp.open("GET", "http://eduship.kaiseritea.de/sendmail.php?" +
             "subject=" + subject + "&&" +
             "nachricht=" + nachricht + "&&" +
-            "from=" + sfromEmail);
+            "from=" + fromEmail);
         xhttp.send();
     }
   }
