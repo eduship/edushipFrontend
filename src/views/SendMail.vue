@@ -51,7 +51,7 @@
                                           cols="80" placeholder="Schreib' hier deine Message!"
                                           v-model="nachrichtInput"></textarea>
                         </base-input>
-                        <base-button type="primary" round block size="lg" color="#553B91" @click.prevent="getFormValues()">
+                        <base-button type="primary" round block size="lg" color="#553B91" @click.prevent="getFormValues(subjectInput,fromEmailInput,nachrichtInput)">
                             E-Mail abschicken
                         </base-button>
                     </card>
@@ -70,21 +70,13 @@ export default {
   components: {},
   data() {
     return {
-      submitData: {
-        subject: "",
-        fromEmail: "",
-        nachricht: ""
-      },
         subjectInput: "",
         fromEmailInput: "team@eduship.de",
         nachrichtInput: ""
     };
   },
   methods: {
-    getFormValues() {
-      var subject = this.subjectInput;
-      var fromEmail = this.fromEmailInput;
-      var nachricht = this.nachrichtInput;
+    getFormValues(subject,fromEmail,nachricht) {
 
         var xhttp = new XMLHttpRequest();
         xhttp.onreadystatechange = function() {
