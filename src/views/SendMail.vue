@@ -82,9 +82,9 @@ export default {
   },
   methods: {
     getFormValues() {
-      var subject = this.subjectInput;
-      var fromEmail = this.fromEmailInput;
-      var nachricht = this.nachrichtInput;
+      var subject = subjectInput;
+      var fromEmail = fromEmailInput;
+      var nachricht = nachrichtInput;
 
         var xhttp = new XMLHttpRequest();
         xhttp.onreadystatechange = function() {
