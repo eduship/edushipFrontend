@@ -37,6 +37,7 @@
                 <base-alert type="primary">
                 <i>Achtung!</i> Mit deinem Klick auf "Absenden" stimmst du zu, dass deine E-Mail-Adresse auf unseren Servern gespeichert wird und durch unser Team eingesehen werden kann. Wir geben deine Adresse nicht an Dritte weiter und löschen sie gerne auf deinen Wunsch.
                 </base-alert>
+                <base-input alternative placeholder="Dein Name" v-model="nameInput" id="name"></base-input>
                 <base-input alternative placeholder="name@example.com" v-model="mailInput" id="email"></base-input>
                 <base-button outline type="primary" @click.prevent="getmail()">Absenden</base-button>
                 <div style="margin-left: 0.2em" id="errors">{{ this.errors }}</div>
@@ -52,7 +53,8 @@ export default {
   data() {
     return {
       errors: "",
-      mailInput: ""
+      mailInput: "",
+        nameInput: ""
     };
   },
   methods: {
@@ -71,7 +73,7 @@ export default {
                   else document.getElementById("errors").innerHTML = "Es gab leider einen Fehler!";
               }
           };
-          xhttp.open("GET", "https://kaiseritea.de/eduship/addmail.php?" + "email=" + this.mailInput.replace("@","(at)"), true);
+          xhttp.open("GET", "https://kaiseritea.de/eduship/addmail.php?" + "email=" + this.mailInput.replace("@","(at)") + "&&name=" + this.nameInput, true);
           xhttp.send();
 
       } else document.getElementById("errors").innerHTML = "Deine E-Mail Adresse ist keine E-Mail Adresse.";
