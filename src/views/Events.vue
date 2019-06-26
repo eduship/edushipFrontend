@@ -69,6 +69,7 @@ import EventComp from "@/components/EventComp";
 import GmapCustomMarker from "vue2-gmap-custom-marker";
 import Scroll from "./components/ScrollComp.vue";
 import axios from "axios";
+ import { db } from '../main.js'
 
 export default {
   name: "home",
@@ -143,6 +144,13 @@ export default {
       .catch(e => {
         this.errors.push(e);
       });
+
+    db.collection("events").get().then((querySnapshot) => {
+    querySnapshot.forEach((doc) => {
+      console.log(doc);
+        console.log(doc.data());
+      });
+    });
   }
 };
 </script>

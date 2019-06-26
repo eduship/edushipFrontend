@@ -16,7 +16,6 @@ import Create from "./views/Create.vue";
 import Newsletter from "./views/Newsletter.vue";
 import SendMail from "./views/SendMail.vue";
 
-
 Vue.use(Router);
 
 export default new Router({
